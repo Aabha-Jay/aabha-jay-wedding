@@ -1,0 +1,619 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f7f0e6">
+<title>Aabha & Jay | Wedding Invitation</title>
+
+<style>
+:root {
+  --cream: #f7f0e6;
+  --paper: #fffaf2;
+  --gold: #b28a4a;
+  --brown: #65452f;
+  --muted: #8c7561;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--brown);
+  font-family: Georgia, serif;
+}
+
+.topbar {
+  padding: 16px;
+  text-align: center;
+  background: var(--paper);
+  border-bottom: 1px solid #ddcba9;
+  font-size: 22px;
+  font-style: italic;
+}
+
+.hero {
+  min-height: 85vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 35px 20px;
+  background: radial-gradient(#fffaf2, #ead9c1);
+}
+
+.frame {
+  width: 100%;
+  max-width: 700px;
+  padding: 55px 20px;
+  border: 2px solid var(--gold);
+  outline: 1px solid #cbb486;
+  outline-offset: 7px;
+  background: #fffaf2d9;
+}
+
+.kicker {
+  color: var(--gold);
+  letter-spacing: 4px;
+  font: 12px Arial, sans-serif;
+}
+
+h1 {
+  font-size: clamp(55px, 12vw, 90px);
+  font-weight: normal;
+  font-style: italic;
+  margin: 25px 0;
+}
+
+.amp { color: var(--gold); }
+
+.hero p {
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 17px;
+}
+
+.date {
+  display: inline-block;
+  padding: 14px;
+  margin-top: 15px;
+  border-top: 1px solid var(--gold);
+  border-bottom: 1px solid var(--gold);
+  letter-spacing: 3px;
+}
+
+section {
+  padding: 65px 20px;
+}
+
+.inner {
+  max-width: 850px;
+  margin: auto;
+  text-align: center;
+}
+
+.eyebrow {
+  color: var(--gold);
+  letter-spacing: 4px;
+  font: 11px Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: clamp(34px, 7vw, 48px);
+  font-weight: normal;
+  font-style: italic;
+  margin: 15px 0;
+}
+
+.lead {
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.scratch-card {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 15px;
+  background: var(--paper);
+  border: 1px solid #d6c29e;
+}
+
+.scratch-area {
+  height: 180px;
+  position: relative;
+  overflow: hidden;
+  touch-action: none;
+}
+
+.reveal {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  background: var(--paper);
+  font-size: 32px;
+  font-style: italic;
+  color: var(--brown);
+}
+
+#scratch {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+}
+
+.hint {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font: 13px Arial;
+  letter-spacing: 2px;
+  pointer-events: none;
+  text-shadow: 0 1px 4px #65452f;
+}
+
+.countdown {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 35px auto;
+}
+
+.timebox {
+  background: var(--paper);
+  padding: 20px 5px;
+  border: 1px solid #ddcba9;
+}
+
+.number {
+  font-size: clamp(26px, 6vw, 42px);
+}
+
+.unit {
+  color: var(--gold);
+  font: 10px Arial;
+  letter-spacing: 2px;
+  margin-top: 8px;
+}
+
+.events {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.event {
+  padding: 25px 10px;
+  background: var(--paper);
+  border: 1px solid #ddcba9;
+}
+
+.event h3 {
+  font-size: 23px;
+  font-style: italic;
+  font-weight: normal;
+}
+
+.event p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.venue {
+  background: var(--paper);
+  border: 1px solid #ddcba9;
+  padding: 30px 15px;
+  margin-top: 25px;
+}
+
+.venue-name {
+  font-size: 27px;
+  font-style: italic;
+  margin: 15px 0;
+}
+
+.btn {
+  display: inline-block;
+  margin: 12px 5px;
+  padding: 15px 22px;
+  background: var(--brown);
+  color: white;
+  text-decoration: none;
+  border: 1px solid var(--gold);
+  font: 12px Arial;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.outline {
+  background: transparent;
+  color: var(--brown);
+}
+
+.footer {
+  background: var(--brown);
+  color: var(--paper);
+  text-align: center;
+  padding: 45px 15px;
+}
+
+.footer .names {
+  font-size: 40px;
+  font-style: italic;
+}
+
+.footer p {
+  color: #e1cba5;
+  letter-spacing: 3px;
+  font: 12px Arial;
+}
+
+@media(max-width:600px) {
+  .events { grid-template-columns: 1fr; }
+  .countdown { gap: 6px; }
+  .timebox { padding: 16px 3px; }
+  .frame { padding: 40px 12px; }
+}
+</style>
+</head>
+
+<body>
+
+<header class="topbar">
+  Aabha & Jay
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="frame">
+    <div class="kicker">TOGETHER WITH OUR FAMILIES</div>
+
+    <h1>
+      Aabha <span class="amp">&</span><br>
+      Jay
+    </h1>
+
+    <p>
+      Joyfully invite you to celebrate<br>
+      the beginning of our forever.
+    </p>
+
+    <div class="date">
+      12 · FEBRUARY · 2027
+    </div>
+
+    <p>A DAY FULL OF LOVE, LAUGHTER & BLESSINGS</p>
+  </div>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="eyebrow">A Little Surprise</div>
+    <h2>Scratch to Reveal Our Date</h2>
+
+    <p class="lead">
+      Scratch the golden card to discover
+      our special wedding date!
+    </p>
+
+    <div class="scratch-card">
+      <div class="scratch-area">
+        <div class="reveal">
+          12 February 2027
+          <span style="font:12px Arial;color:#b28a4a">
+            SAVE THE DATE
+          </span>
+        </div>
+
+        <canvas id="scratch"></canvas>
+        <div class="hint" id="hint">SCRATCH HERE ✨</div>
+      </div>
+      <p style="font-size:12px;color:#8c7561">
+        Use your finger to scratch the golden layer.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section style="background:#efe3d1" id="countdown">
+  <div class="inner">
+    <div class="eyebrow">The Countdown Begins</div>
+    <h2>Until Our Forever</h2>
+
+    <p class="lead">
+      Every moment brings us closer to our special day.
+    </p>
+
+    <div class="countdown">
+      <div class="timebox">
+        <div class="number" id="days">--</div>
+        <div class="unit">DAYS</div>
+      </div>
+
+      <div class="timebox">
+        <div class="number" id="hours">--</div>
+        <div class="unit">HOURS</div>
+      </div>
+
+      <div class="timebox">
+        <div class="number" id="minutes">--</div>
+        <div class="unit">MINUTES</div>
+      </div>
+
+      <div class="timebox">
+        <div class="number" id="seconds">--</div>
+        <div class="unit">SECONDS</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="eyebrow">Our Celebrations</div>
+    <h2>Join Our Happy Moments</h2>
+
+    <p class="lead">
+      We can't wait to celebrate this beautiful
+      occasion with our favourite people!
+    </p>
+
+    <div class="events">
+      <div class="event">
+        <div>✿</div>
+        <h3>Haldi</h3>
+        <p>Sunshine, laughter and happiness.</p>
+      </div>
+
+      <div class="event">
+        <div>❀</div>
+        <h3>Mehendi</h3>
+        <p>Beautiful designs and lovely memories.</p>
+      </div>
+
+      <div class="event">
+        <div>❧</div>
+        <h3>Wedding</h3>
+        <p>The beginning of our forever.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#efe3d1">
+  <div class="inner">
+    <div class="eyebrow">Where We Celebrate</div>
+    <h2>Our Wedding Venue</h2>
+
+    <div class="venue">
+      <div style="font-size:30px">⌖</div>
+
+      <div class="venue-name">
+        The Ambez Restaurant & Banquet
+      </div>
+
+      <p class="lead">
+        12 February 2027
+      </p>
+
+      <a class="btn"
+         href="https://maps.app.goo.gl/EPVpKRPEVHxZdZQP9"
+         target="_blank"
+         rel="noopener">
+        OPEN GOOGLE MAPS
+      </a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="eyebrow">Be Part of Our Story</div>
+    <h2>Your Presence Is Our Present</h2>
+
+    <p class="lead">
+      We would be delighted to have you with us
+      as we begin this beautiful new chapter.
+    </p>
+
+    <a class="btn" id="whatsapp" href="#">
+      SHARE ON WHATSAPP
+    </a>
+
+    <button class="btn outline" onclick="copyLink()">
+      COPY INVITATION LINK
+    </button>
+
+    <p id="copyNote" style="font-size:12px"></p>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="names">Aabha & Jay</div>
+  <p>12 · 02 · 2027</p>
+  <p>WITH LOVE, ALWAYS ♡</p>
+</footer>
+
+<script>
+// WEDDING COUNTDOWN
+const weddingDate =
+  new Date("2027-02-12T00:00:00+05:30").getTime();
+
+function updateCountdown() {
+  const diff = weddingDate - Date.now();
+
+  if (diff <= 0) {
+    ["days","hours","minutes","seconds"].forEach(id => {
+      document.getElementById(id).textContent = "0";
+    });
+    return;
+  }
+
+  document.getElementById("days").textContent =
+    Math.floor(diff / 86400000);
+
+  document.getElementById("hours").textContent =
+    Math.floor(diff % 86400000 / 3600000);
+
+  document.getElementById("minutes").textContent =
+    Math.floor(diff % 3600000 / 60000);
+
+  document.getElementById("seconds").textContent =
+    Math.floor(diff % 60000 / 1000);
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+
+// SCRATCH CARD
+const canvas = document.getElementById("scratch");
+const ctx = canvas.getContext("2d");
+const area = canvas.parentElement;
+
+let drawing = false;
+let revealed = false;
+
+function setupScratch() {
+  const rect = area.getBoundingClientRect();
+  const dpr = window.devicePixelRatio || 1;
+
+  canvas.width = rect.width * dpr;
+  canvas.height = rect.height * dpr;
+
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+  const gradient = ctx.createLinearGradient(
+    0, 0, rect.width, rect.height
+  );
+
+  gradient.addColorStop(0, "#dfcba8");
+  gradient.addColorStop(0.5, "#b28a4a");
+  gradient.addColorStop(1, "#e7d5b5");
+
+  ctx.globalCompositeOperation = "source-over";
+  ctx.fillStyle = gradient;
+  ctx.fillRect(0, 0, rect.width, rect.height);
+
+  ctx.fillStyle = "#fffaf2";
+  ctx.font = "14px Arial";
+  ctx.textAlign = "center";
+  ctx.fillText(
+    "✧ A SPECIAL DATE ✧",
+    rect.width / 2,
+    rect.height / 2 + 5
+  );
+
+  ctx.globalCompositeOperation = "destination-out";
+}
+
+function scratch(event) {
+  if (!drawing || revealed) return;
+
+  event.preventDefault();
+
+  const rect = canvas.getBoundingClientRect();
+
+  const x = event.clientX - rect.left;
+  const y = event.clientY - rect.top;
+
+  ctx.beginPath();
+  ctx.arc(x, y, 23, 0, Math.PI * 2);
+  ctx.fill();
+}
+
+function checkReveal() {
+  if (revealed) return;
+
+  const pixels = ctx.getImageData(
+    0, 0, canvas.width, canvas.height
+  ).data;
+
+  let cleared = 0;
+  let total = 0;
+
+  for (let i = 3; i < pixels.length; i += 64) {
+    total++;
+    if (pixels[i] < 80) cleared++;
+  }
+
+  if (cleared / total > 0.38) {
+    revealed = true;
+    canvas.style.transition = "opacity .5s";
+    canvas.style.opacity = "0";
+    document.getElementById("hint").style.display = "none";
+
+    setTimeout(() => {
+      canvas.style.display = "none";
+    }, 550);
+  }
+}
+
+canvas.addEventListener("pointerdown", event => {
+  if (revealed) return;
+  drawing = true;
+  canvas.setPointerCapture(event.pointerId);
+  scratch(event);
+});
+
+canvas.addEventListener("pointermove", scratch);
+
+canvas.addEventListener("pointerup", () => {
+  drawing = false;
+  checkReveal();
+});
+
+canvas.addEventListener("pointercancel", () => {
+  drawing = false;
+});
+
+setupScratch();
+
+window.addEventListener("resize", () => {
+  if (!revealed) setupScratch();
+});
+
+
+// WHATSAPP SHARING
+const message =
+  "Aabha & Jay are getting married! 💍\n" +
+  "12 February 2027\n" +
+  "The Ambez Restaurant & Banquet\n" +
+  "Join us to celebrate our special day! ❤️\n" +
+  window.location.href;
+
+document.getElementById("whatsapp").href =
+  "https://wa.me/?text=" + encodeURIComponent(message);
+
+
+// COPY WEBSITE LINK
+async function copyLink() {
+  const note = document.getElementById("copyNote");
+
+  try {
+    await navigator.clipboard.writeText(window.location.href);
+    note.textContent = "Invitation link copied successfully! ❤️";
+  } catch (error) {
+    note.textContent =
+      "Copy your website URL from the browser address bar.";
+  }
+}
+</script>
+
+</body>
+</html>
