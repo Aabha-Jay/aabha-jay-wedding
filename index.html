@@ -3,459 +3,833 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#f7f0e6">
-<title>Aabha & Jay | Wedding Invitation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f8f1e7">
+<title>Aabha & Jay | Our Wedding</title>
 
 <style>
 :root {
-  --cream: #f7f0e6;
-  --paper: #fffaf2;
-  --gold: #b28a4a;
-  --brown: #65452f;
-  --muted: #8c7561;
+  --cream:#f8f1e7;
+  --paper:#fffaf3;
+  --gold:#b7955c;
+  --gold-light:#e4d2ad;
+  --brown:#63452f;
+  --text:#745e4b;
+  --white:#fff;
 }
 
-* { box-sizing: border-box; }
+* {box-sizing:border-box}
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior:smooth;
+  scroll-padding-top:85px;
+}
 
 body {
-  margin: 0;
-  background: var(--cream);
-  color: var(--brown);
-  font-family: Georgia, serif;
+  margin:0;
+  background:var(--cream);
+  color:var(--brown);
+  font-family:Georgia,serif;
 }
 
-.topbar {
-  padding: 16px;
-  text-align: center;
-  background: var(--paper);
-  border-bottom: 1px solid #ddcba9;
-  font-size: 22px;
-  font-style: italic;
+button,a {font:inherit}
+a {color:inherit}
+button {cursor:pointer}
+
+.progress {
+  height:3px;
+  background:var(--gold);
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:100;
+  width:0;
+}
+
+header {
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:#fffaf3ed;
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid #e8dcc8;
+}
+
+.nav {
+  max-width:1100px;
+  margin:auto;
+  min-height:66px;
+  padding:10px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+}
+
+.logo {
+  font-size:23px;
+  font-style:italic;
+  color:var(--brown);
+  white-space:nowrap;
+}
+
+.nav-links {
+  display:flex;
+  align-items:center;
+  gap:22px;
+}
+
+.nav-links a {
+  font:11px Arial,sans-serif;
+  letter-spacing:1px;
+  text-decoration:none;
+  color:var(--text);
+}
+
+.nav-links a:hover {color:var(--gold)}
+
+.menu-btn {
+  display:none;
+  border:1px solid var(--gold-light);
+  background:transparent;
+  color:var(--brown);
+  padding:9px 13px;
+  border-radius:6px;
 }
 
 .hero {
-  min-height: 85vh;
-  display: grid;
-  place-items: center;
-  text-align: center;
-  padding: 35px 20px;
-  background: radial-gradient(#fffaf2, #ead9c1);
+  min-height:90vh;
+  display:grid;
+  place-items:center;
+  padding:65px 20px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(ellipse at center,#fffaf4 0%,#f5e9d8 75%,#e9d8bd 100%);
 }
 
-.frame {
-  width: 100%;
-  max-width: 700px;
-  padding: 55px 20px;
-  border: 2px solid var(--gold);
-  outline: 1px solid #cbb486;
-  outline-offset: 7px;
-  background: #fffaf2d9;
+.hero:before,.hero:after {
+  content:"❧";
+  position:absolute;
+  font-size:clamp(100px,18vw,190px);
+  color:var(--gold);
+  opacity:.18;
+  pointer-events:none;
 }
 
-.kicker {
-  color: var(--gold);
-  letter-spacing: 4px;
-  font: 12px Arial, sans-serif;
+.hero:before {
+  top:5%;
+  left:2%;
+  transform:rotate(-35deg);
 }
 
-h1 {
-  font-size: clamp(55px, 12vw, 90px);
-  font-weight: normal;
-  font-style: italic;
-  margin: 25px 0;
+.hero:after {
+  bottom:3%;
+  right:2%;
+  transform:rotate(145deg);
 }
 
-.amp { color: var(--gold); }
-
-.hero p {
-  color: var(--muted);
-  line-height: 1.8;
-  font-size: 17px;
-}
-
-.date {
-  display: inline-block;
-  padding: 14px;
-  margin-top: 15px;
-  border-top: 1px solid var(--gold);
-  border-bottom: 1px solid var(--gold);
-  letter-spacing: 3px;
-}
-
-section {
-  padding: 65px 20px;
-}
-
-.inner {
-  max-width: 850px;
-  margin: auto;
-  text-align: center;
+.hero-frame {
+  max-width:760px;
+  width:100%;
+  padding:clamp(35px,7vw,75px) 20px;
+  background:#fffaf2d9;
+  border:1px solid var(--gold);
+  outline:1px solid #cbb486;
+  outline-offset:8px;
+  position:relative;
+  z-index:1;
 }
 
 .eyebrow {
-  color: var(--gold);
-  letter-spacing: 4px;
-  font: 11px Arial, sans-serif;
-  text-transform: uppercase;
+  font:11px Arial,sans-serif;
+  letter-spacing:4px;
+  color:var(--gold);
+  text-transform:uppercase;
 }
 
-h2 {
-  font-size: clamp(34px, 7vw, 48px);
-  font-weight: normal;
-  font-style: italic;
-  margin: 15px 0;
+.hero h1 {
+  font-size:clamp(60px,12vw,105px);
+  font-weight:400;
+  font-style:italic;
+  line-height:.98;
+  margin:25px 0;
 }
 
-.lead {
-  color: var(--muted);
-  line-height: 1.8;
-  font-size: 16px;
+.amp {color:var(--gold)}
+
+.hero-description {
+  color:var(--text);
+  line-height:1.9;
+  font-size:17px;
+}
+
+.hero-date {
+  display:inline-block;
+  padding:14px 20px;
+  border-top:1px solid var(--gold);
+  border-bottom:1px solid var(--gold);
+  letter-spacing:3px;
+  margin-top:18px;
+  font:13px Arial,sans-serif;
+}
+
+.hero-btn {
+  display:inline-block;
+  margin-top:28px;
+  padding:14px 25px;
+  color:var(--white);
+  background:var(--brown);
+  text-decoration:none;
+  letter-spacing:1px;
+  font:12px Arial,sans-serif;
+  border:1px solid var(--gold);
+}
+
+section {
+  padding:85px 20px;
+}
+
+.section-inner {
+  max-width:950px;
+  margin:auto;
+  text-align:center;
+}
+
+.section-title {
+  font-size:clamp(35px,7vw,54px);
+  font-weight:400;
+  font-style:italic;
+  margin:15px 0;
+}
+
+.section-text {
+  max-width:650px;
+  margin:0 auto;
+  color:var(--text);
+  font-size:16px;
+  line-height:1.9;
+}
+
+.scratch-section {
+  background:var(--paper);
 }
 
 .scratch-card {
-  max-width: 500px;
-  margin: 30px auto;
-  padding: 15px;
-  background: var(--paper);
-  border: 1px solid #d6c29e;
+  max-width:510px;
+  margin:38px auto 0;
+  padding:15px;
+  background:white;
+  border:1px solid var(--gold-light);
+  box-shadow:0 15px 35px #65452f12;
 }
 
 .scratch-area {
-  height: 180px;
-  position: relative;
-  overflow: hidden;
-  touch-action: none;
+  height:190px;
+  position:relative;
+  overflow:hidden;
+  background:var(--paper);
+  touch-action:none;
+  user-select:none;
 }
 
-.reveal {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-content: center;
-  background: var(--paper);
-  font-size: 32px;
-  font-style: italic;
-  color: var(--brown);
+.reveal-content {
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:12px;
+  background:var(--paper);
+  color:var(--brown);
 }
 
-#scratch {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  touch-action: none;
+.reveal-date {
+  font-size:clamp(25px,6vw,38px);
+  font-style:italic;
 }
 
-.hint {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  color: white;
-  font: 13px Arial;
-  letter-spacing: 2px;
-  pointer-events: none;
-  text-shadow: 0 1px 4px #65452f;
+.reveal-label {
+  color:var(--gold);
+  font:11px Arial,sans-serif;
+  letter-spacing:3px;
 }
 
-.countdown {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-  margin: 35px auto;
+#scratchCanvas {
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  touch-action:none;
+  cursor:crosshair;
 }
 
-.timebox {
-  background: var(--paper);
-  padding: 20px 5px;
-  border: 1px solid #ddcba9;
+.scratch-hint {
+  position:absolute;
+  top:50%;
+  left:0;
+  width:100%;
+  transform:translateY(-50%);
+  color:white;
+  font:12px Arial,sans-serif;
+  letter-spacing:2px;
+  text-align:center;
+  pointer-events:none;
+  text-shadow:0 1px 5px #63452f;
 }
 
-.number {
-  font-size: clamp(26px, 6vw, 42px);
-}
-
-.unit {
-  color: var(--gold);
-  font: 10px Arial;
-  letter-spacing: 2px;
-  margin-top: 8px;
-}
-
-.events {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  margin-top: 30px;
-}
-
-.event {
-  padding: 25px 10px;
-  background: var(--paper);
-  border: 1px solid #ddcba9;
-}
-
-.event h3 {
-  font-size: 23px;
-  font-style: italic;
-  font-weight: normal;
-}
-
-.event p {
-  color: var(--muted);
-  font-size: 13px;
-  line-height: 1.7;
-}
-
-.venue {
-  background: var(--paper);
-  border: 1px solid #ddcba9;
-  padding: 30px 15px;
-  margin-top: 25px;
-}
-
-.venue-name {
-  font-size: 27px;
-  font-style: italic;
-  margin: 15px 0;
+.scratch-actions {
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:18px;
 }
 
 .btn {
-  display: inline-block;
-  margin: 12px 5px;
-  padding: 15px 22px;
-  background: var(--brown);
-  color: white;
-  text-decoration: none;
-  border: 1px solid var(--gold);
-  font: 12px Arial;
-  letter-spacing: 1px;
-  cursor: pointer;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:14px 22px;
+  background:var(--brown);
+  color:white;
+  border:1px solid var(--gold);
+  text-decoration:none;
+  font:12px Arial,sans-serif;
+  letter-spacing:1px;
+  border-radius:3px;
 }
 
-.outline {
-  background: transparent;
-  color: var(--brown);
+.btn.secondary {
+  background:transparent;
+  color:var(--brown);
+}
+
+.btn:hover {
+  background:var(--gold);
+  color:white;
+}
+
+.btn:focus-visible,a:focus-visible {
+  outline:3px solid var(--gold);
+  outline-offset:4px;
+}
+
+.hint-text {
+  font:12px Arial,sans-serif;
+  color:var(--text);
+  margin-top:15px;
+}
+
+.soft-section {
+  background:#efe3d1;
+}
+
+.countdown {
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:13px;
+  max-width:680px;
+  margin:38px auto 0;
+}
+
+.time-card {
+  background:var(--paper);
+  border:1px solid var(--gold-light);
+  padding:25px 8px;
+  box-shadow:0 5px 15px #65452f08;
+}
+
+.time-number {
+  font-size:clamp(30px,6vw,48px);
+  color:var(--brown);
+  font-variant-numeric:tabular-nums;
+}
+
+.time-label {
+  margin-top:8px;
+  color:var(--gold);
+  font:10px Arial,sans-serif;
+  letter-spacing:2px;
+}
+
+.events {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  margin-top:38px;
+}
+
+.event-card {
+  background:var(--paper);
+  border:1px solid var(--gold-light);
+  padding:32px 15px;
+  transition:transform .25s,box-shadow .25s;
+}
+
+.event-card:hover {
+  transform:translateY(-5px);
+  box-shadow:0 12px 25px #65452f12;
+}
+
+.event-icon {
+  font-size:32px;
+  color:var(--gold);
+}
+
+.event-card h3 {
+  font-size:26px;
+  font-style:italic;
+  font-weight:400;
+  margin:14px 0;
+}
+
+.event-card p {
+  font:13px Arial,sans-serif;
+  line-height:1.8;
+  color:var(--text);
+}
+
+.venue-card {
+  max-width:680px;
+  margin:35px auto 0;
+  padding:35px 20px;
+  background:var(--paper);
+  border:1px solid var(--gold-light);
+}
+
+.venue-icon {
+  font-size:38px;
+  color:var(--gold);
+}
+
+.venue-name {
+  font-size:clamp(24px,5vw,34px);
+  font-style:italic;
+  margin:15px 0;
+}
+
+.venue-note {
+  color:var(--text);
+  line-height:1.8;
+  font-size:14px;
+}
+
+.final-section {
+  background:var(--paper);
+}
+
+.final-names {
+  font-size:clamp(45px,10vw,70px);
+  font-style:italic;
+  margin:25px 0;
 }
 
 .footer {
-  background: var(--brown);
-  color: var(--paper);
-  text-align: center;
-  padding: 45px 15px;
+  background:var(--brown);
+  color:var(--paper);
+  text-align:center;
+  padding:45px 20px;
 }
 
-.footer .names {
-  font-size: 40px;
-  font-style: italic;
+.footer-name {
+  font-size:42px;
+  font-style:italic;
 }
 
 .footer p {
-  color: #e1cba5;
-  letter-spacing: 3px;
-  font: 12px Arial;
+  color:#e5d0aa;
+  font:11px Arial,sans-serif;
+  letter-spacing:3px;
+  line-height:2;
 }
 
-@media(max-width:600px) {
-  .events { grid-template-columns: 1fr; }
-  .countdown { gap: 6px; }
-  .timebox { padding: 16px 3px; }
-  .frame { padding: 40px 12px; }
+.floating-share {
+  position:fixed;
+  right:18px;
+  bottom:20px;
+  z-index:40;
+  width:55px;
+  height:55px;
+  border-radius:50%;
+  background:#258b52;
+  color:white;
+  display:grid;
+  place-items:center;
+  text-decoration:none;
+  font:22px Arial,sans-serif;
+  box-shadow:0 5px 18px #0003;
+}
+
+.back-top {
+  position:fixed;
+  left:18px;
+  bottom:20px;
+  z-index:40;
+  width:42px;
+  height:42px;
+  border:1px solid var(--gold);
+  border-radius:50%;
+  background:var(--paper);
+  color:var(--brown);
+  display:none;
+  font-size:20px;
+}
+
+.copy-message {
+  min-height:20px;
+  margin-top:12px;
+  color:var(--gold);
+  font:12px Arial,sans-serif;
+}
+
+@media(max-width:700px) {
+  .nav {
+    min-height:60px;
+  }
+
+  .menu-btn {display:block}
+
+  .nav-links {
+    display:none;
+    position:absolute;
+    top:60px;
+    left:0;
+    right:0;
+    padding:18px;
+    background:var(--paper);
+    border-bottom:1px solid var(--gold-light);
+    flex-direction:column;
+    gap:20px;
+  }
+
+  .nav-links.open {display:flex}
+
+  .nav-links a {
+    font-size:12px;
+    padding:5px;
+  }
+
+  .hero {min-height:80vh}
+
+  section {padding:65px 17px}
+
+  .events {grid-template-columns:1fr}
+
+  .event-card {padding:25px}
+
+  .countdown {gap:7px}
+
+  .time-card {padding:18px 3px}
+
+  .time-label {letter-spacing:1px;font-size:9px}
+
+  .scratch-area {height:175px}
+}
+
+@media(prefers-reduced-motion:reduce) {
+  html {scroll-behavior:auto}
+  *,*::before,*::after {
+    transition:none!important;
+    animation:none!important;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<header class="topbar">
-  Aabha & Jay
+<div class="progress" id="progress"></div>
+
+<header>
+  <div class="nav">
+    <div class="logo">Aabha & Jay ♡</div>
+
+    <button class="menu-btn" id="menuBtn"
+      aria-label="Open navigation"
+      aria-expanded="false">☰</button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">HOME</a>
+      <a href="#scratch">OUR DATE</a>
+      <a href="#countdown">COUNTDOWN</a>
+      <a href="#events">CELEBRATIONS</a>
+      <a href="#venue">VENUE</a>
+    </nav>
+  </div>
 </header>
 
 <main>
 
-<section class="hero">
-  <div class="frame">
-    <div class="kicker">TOGETHER WITH OUR FAMILIES</div>
+<section class="hero" id="home">
+  <div class="hero-frame">
+    <div class="eyebrow">Together with our families</div>
 
     <h1>
-      Aabha <span class="amp">&</span><br>
-      Jay
+      Aabha <span class="amp">&</span><br>Jay
     </h1>
 
-    <p>
+    <p class="hero-description">
       Joyfully invite you to celebrate<br>
       the beginning of our forever.
     </p>
 
-    <div class="date">
-      12 · FEBRUARY · 2027
-    </div>
+    <div class="hero-date">12 · FEBRUARY · 2027</div>
 
-    <p>A DAY FULL OF LOVE, LAUGHTER & BLESSINGS</p>
+    <p class="hero-description">
+      A DAY FULL OF LOVE, LAUGHTER & BLESSINGS
+    </p>
+
+    <a class="hero-btn" href="#scratch">
+      DISCOVER OUR SPECIAL DATE ↓
+    </a>
   </div>
 </section>
 
-<section>
-  <div class="inner">
-    <div class="eyebrow">A Little Surprise</div>
-    <h2>Scratch to Reveal Our Date</h2>
+<section class="scratch-section" id="scratch">
+  <div class="section-inner">
+    <div class="eyebrow">A little surprise</div>
+    <h2 class="section-title">Scratch to Reveal Our Date</h2>
 
-    <p class="lead">
-      Scratch the golden card to discover
-      our special wedding date!
+    <p class="section-text">
+      A special moment is waiting for you!
+      Scratch the golden card and discover our
+      wedding date.
     </p>
 
     <div class="scratch-card">
-      <div class="scratch-area">
-        <div class="reveal">
-          12 February 2027
-          <span style="font:12px Arial;color:#b28a4a">
-            SAVE THE DATE
-          </span>
+      <div class="scratch-area" id="scratchArea">
+
+        <div class="reveal-content">
+          <div class="reveal-date">12 February 2027</div>
+          <div class="reveal-label">SAVE THE DATE ♡</div>
         </div>
 
-        <canvas id="scratch"></canvas>
-        <div class="hint" id="hint">SCRATCH HERE ✨</div>
+        <canvas id="scratchCanvas"
+          aria-label="Scratch this card to reveal the wedding date"></canvas>
+
+        <div class="scratch-hint" id="scratchHint">
+          ✨ SCRATCH HERE ✨
+        </div>
       </div>
-      <p style="font-size:12px;color:#8c7561">
-        Use your finger to scratch the golden layer.
+
+      <div class="scratch-actions">
+        <button class="btn" id="revealBtn">
+          REVEAL DATE
+        </button>
+        <button class="btn secondary" id="resetBtn">
+          RESET CARD
+        </button>
+      </div>
+
+      <p class="hint-text">
+        Use your finger or mouse to scratch the golden layer.
       </p>
     </div>
   </div>
 </section>
 
-<section style="background:#efe3d1" id="countdown">
-  <div class="inner">
-    <div class="eyebrow">The Countdown Begins</div>
-    <h2>Until Our Forever</h2>
+<section class="soft-section" id="countdown">
+  <div class="section-inner">
+    <div class="eyebrow">The countdown begins</div>
+    <h2 class="section-title">Until Our Forever</h2>
 
-    <p class="lead">
-      Every moment brings us closer to our special day.
+    <p class="section-text">
+      Every second brings us closer to our
+      beautiful new beginning.
     </p>
 
     <div class="countdown">
-      <div class="timebox">
-        <div class="number" id="days">--</div>
-        <div class="unit">DAYS</div>
+      <div class="time-card">
+        <div class="time-number" id="days">--</div>
+        <div class="time-label">DAYS</div>
       </div>
 
-      <div class="timebox">
-        <div class="number" id="hours">--</div>
-        <div class="unit">HOURS</div>
+      <div class="time-card">
+        <div class="time-number" id="hours">--</div>
+        <div class="time-label">HOURS</div>
       </div>
 
-      <div class="timebox">
-        <div class="number" id="minutes">--</div>
-        <div class="unit">MINUTES</div>
+      <div class="time-card">
+        <div class="time-number" id="minutes">--</div>
+        <div class="time-label">MINUTES</div>
       </div>
 
-      <div class="timebox">
-        <div class="number" id="seconds">--</div>
-        <div class="unit">SECONDS</div>
+      <div class="time-card">
+        <div class="time-number" id="seconds">--</div>
+        <div class="time-label">SECONDS</div>
       </div>
     </div>
   </div>
 </section>
 
-<section>
-  <div class="inner">
-    <div class="eyebrow">Our Celebrations</div>
-    <h2>Join Our Happy Moments</h2>
+<section id="events">
+  <div class="section-inner">
+    <div class="eyebrow">Our special celebrations</div>
+    <h2 class="section-title">Celebrate With Us</h2>
 
-    <p class="lead">
-      We can't wait to celebrate this beautiful
-      occasion with our favourite people!
+    <p class="section-text">
+      Beautiful traditions, happy moments and
+      memories to cherish forever.
     </p>
 
     <div class="events">
-      <div class="event">
-        <div>✿</div>
+      <article class="event-card">
+        <div class="event-icon">✿</div>
         <h3>Haldi</h3>
-        <p>Sunshine, laughter and happiness.</p>
-      </div>
+        <p>
+          Sunshine, smiles and beautiful
+          yellow moments.
+        </p>
+      </article>
 
-      <div class="event">
-        <div>❀</div>
+      <article class="event-card">
+        <div class="event-icon">❀</div>
         <h3>Mehendi</h3>
-        <p>Beautiful designs and lovely memories.</p>
-      </div>
+        <p>
+          Colours, creativity and
+          memories filled with love.
+        </p>
+      </article>
 
-      <div class="event">
-        <div>❧</div>
+      <article class="event-card">
+        <div class="event-icon">❧</div>
         <h3>Wedding</h3>
-        <p>The beginning of our forever.</p>
-      </div>
+        <p>
+          Two hearts, one beautiful
+          journey and forever together.
+        </p>
+      </article>
     </div>
+
+    <p class="hint-text">
+      More celebration details will be shared soon.
+    </p>
   </div>
 </section>
 
-<section style="background:#efe3d1">
-  <div class="inner">
-    <div class="eyebrow">Where We Celebrate</div>
-    <h2>Our Wedding Venue</h2>
+<section class="soft-section" id="venue">
+  <div class="section-inner">
+    <div class="eyebrow">Where we celebrate</div>
+    <h2 class="section-title">Our Wedding Venue</h2>
 
-    <div class="venue">
-      <div style="font-size:30px">⌖</div>
+    <div class="venue-card">
+      <div class="venue-icon">⌖</div>
 
       <div class="venue-name">
         The Ambez Restaurant & Banquet
       </div>
 
-      <p class="lead">
-        12 February 2027
+      <p class="venue-note">
+        12 February 2027<br>
+        We look forward to celebrating
+        this special day with you!
       </p>
 
       <a class="btn"
-         href="https://maps.app.goo.gl/EPVpKRPEVHxZdZQP9"
-         target="_blank"
-         rel="noopener">
-        OPEN GOOGLE MAPS
+        href="https://maps.app.goo.gl/EPVpKRPEVHxZdZQP9"
+        target="_blank" rel="noopener">
+        📍 GET DIRECTIONS
       </a>
     </div>
   </div>
 </section>
 
-<section>
-  <div class="inner">
-    <div class="eyebrow">Be Part of Our Story</div>
-    <h2>Your Presence Is Our Present</h2>
+<section class="final-section">
+  <div class="section-inner">
+    <div class="eyebrow">A beautiful beginning</div>
 
-    <p class="lead">
+    <div class="final-names">Aabha & Jay</div>
+
+    <h2 class="section-title">
+      Your Presence Is Our Present
+    </h2>
+
+    <p class="section-text">
       We would be delighted to have you with us
       as we begin this beautiful new chapter.
+      Your blessings and love mean everything to us.
     </p>
 
-    <a class="btn" id="whatsapp" href="#">
-      SHARE ON WHATSAPP
+    <a class="btn" id="shareBtn" href="#">
+      ♡ SHARE ON WHATSAPP
     </a>
 
-    <button class="btn outline" onclick="copyLink()">
+    <button class="btn secondary" id="copyBtn">
       COPY INVITATION LINK
     </button>
 
-    <p id="copyNote" style="font-size:12px"></p>
+    <div class="copy-message" id="copyMessage"
+      aria-live="polite"></div>
   </div>
 </section>
 
 </main>
 
 <footer class="footer">
-  <div class="names">Aabha & Jay</div>
+  <div class="footer-name">Aabha & Jay</div>
   <p>12 · 02 · 2027</p>
   <p>WITH LOVE, ALWAYS ♡</p>
 </footer>
 
+<a class="floating-share" id="floatingShare"
+  href="#" aria-label="Share wedding invitation on WhatsApp">
+  ♡
+</a>
+
+<button class="back-top" id="backTop"
+  aria-label="Back to top">↑</button>
+
 <script>
+
+// MOBILE NAVIGATION
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", () => {
+  const opened = navLinks.classList.toggle("open");
+  menuBtn.setAttribute("aria-expanded", opened);
+  menuBtn.textContent = opened ? "✕" : "☰";
+});
+
+navLinks.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("open");
+    menuBtn.setAttribute("aria-expanded", "false");
+    menuBtn.textContent = "☰";
+  });
+});
+
+
+// SCROLL PROGRESS AND BACK TO TOP
+window.addEventListener("scroll", () => {
+  const scrollable =
+    document.documentElement.scrollHeight - window.innerHeight;
+
+  const percent = scrollable > 0
+    ? window.scrollY / scrollable * 100 : 0;
+
+  document.getElementById("progress").style.width =
+    percent + "%";
+
+  document.getElementById("backTop").style.display =
+    window.scrollY > 400 ? "block" : "none";
+});
+
+document.getElementById("backTop").addEventListener("click", () => {
+  window.scrollTo({top:0,behavior:"smooth"});
+});
+
+
 // WEDDING COUNTDOWN
 const weddingDate =
   new Date("2027-02-12T00:00:00+05:30").getTime();
 
 function updateCountdown() {
-  const diff = weddingDate - Date.now();
+  let diff = weddingDate - Date.now();
 
   if (diff <= 0) {
     ["days","hours","minutes","seconds"].forEach(id => {
@@ -482,138 +856,171 @@ setInterval(updateCountdown, 1000);
 
 
 // SCRATCH CARD
-const canvas = document.getElementById("scratch");
+const canvas = document.getElementById("scratchCanvas");
 const ctx = canvas.getContext("2d");
-const area = canvas.parentElement;
+const scratchArea = document.getElementById("scratchArea");
+const scratchHint = document.getElementById("scratchHint");
 
-let drawing = false;
-let revealed = false;
+let isDrawing = false;
+let isRevealed = false;
 
 function setupScratch() {
-  const rect = area.getBoundingClientRect();
+  const rect = scratchArea.getBoundingClientRect();
   const dpr = window.devicePixelRatio || 1;
 
-  canvas.width = rect.width * dpr;
-  canvas.height = rect.height * dpr;
+  canvas.width = Math.round(rect.width * dpr);
+  canvas.height = Math.round(rect.height * dpr);
 
-  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  canvas.style.width = rect.width + "px";
+  canvas.style.height = rect.height + "px";
+
+  ctx.setTransform(dpr,0,0,dpr,0,0);
 
   const gradient = ctx.createLinearGradient(
-    0, 0, rect.width, rect.height
+    0,0,rect.width,rect.height
   );
 
-  gradient.addColorStop(0, "#dfcba8");
-  gradient.addColorStop(0.5, "#b28a4a");
-  gradient.addColorStop(1, "#e7d5b5");
+  gradient.addColorStop(0,"#e6d1a9");
+  gradient.addColorStop(.5,"#b28a4a");
+  gradient.addColorStop(1,"#e2cba2");
 
   ctx.globalCompositeOperation = "source-over";
   ctx.fillStyle = gradient;
-  ctx.fillRect(0, 0, rect.width, rect.height);
+  ctx.fillRect(0,0,rect.width,rect.height);
 
   ctx.fillStyle = "#fffaf2";
   ctx.font = "14px Arial";
   ctx.textAlign = "center";
   ctx.fillText(
     "✧ A SPECIAL DATE ✧",
-    rect.width / 2,
-    rect.height / 2 + 5
+    rect.width/2,
+    rect.height/2+5
   );
 
   ctx.globalCompositeOperation = "destination-out";
+
+  canvas.style.display = "block";
+  canvas.style.opacity = "1";
+  scratchHint.style.display = "block";
+
+  isRevealed = false;
 }
 
 function scratch(event) {
-  if (!drawing || revealed) return;
-
-  event.preventDefault();
+  if (!isDrawing || isRevealed) return;
 
   const rect = canvas.getBoundingClientRect();
-
   const x = event.clientX - rect.left;
   const y = event.clientY - rect.top;
 
   ctx.beginPath();
-  ctx.arc(x, y, 23, 0, Math.PI * 2);
+  ctx.arc(x,y,24,0,Math.PI*2);
   ctx.fill();
 }
 
-function checkReveal() {
-  if (revealed) return;
+function revealCard() {
+  if (isRevealed) return;
+
+  isRevealed = true;
+  isDrawing = false;
+
+  canvas.style.transition = "opacity .45s ease";
+  canvas.style.opacity = "0";
+  scratchHint.style.display = "none";
+
+  setTimeout(() => {
+    canvas.style.display = "none";
+  }, 500);
+}
+
+function checkScratchProgress() {
+  if (isRevealed) return;
 
   const pixels = ctx.getImageData(
-    0, 0, canvas.width, canvas.height
+    0,0,canvas.width,canvas.height
   ).data;
 
   let cleared = 0;
   let total = 0;
 
-  for (let i = 3; i < pixels.length; i += 64) {
+  for (let i=3; i<pixels.length; i+=64) {
     total++;
     if (pixels[i] < 80) cleared++;
   }
 
-  if (cleared / total > 0.38) {
-    revealed = true;
-    canvas.style.transition = "opacity .5s";
-    canvas.style.opacity = "0";
-    document.getElementById("hint").style.display = "none";
-
-    setTimeout(() => {
-      canvas.style.display = "none";
-    }, 550);
+  if (total && cleared / total > .35) {
+    revealCard();
   }
 }
 
 canvas.addEventListener("pointerdown", event => {
-  if (revealed) return;
-  drawing = true;
-  canvas.setPointerCapture(event.pointerId);
+  if (isRevealed) return;
+
+  isDrawing = true;
+
+  if (canvas.setPointerCapture) {
+    canvas.setPointerCapture(event.pointerId);
+  }
+
   scratch(event);
 });
 
 canvas.addEventListener("pointermove", scratch);
 
 canvas.addEventListener("pointerup", () => {
-  drawing = false;
-  checkReveal();
+  if (!isDrawing) return;
+  isDrawing = false;
+  checkScratchProgress();
 });
 
 canvas.addEventListener("pointercancel", () => {
-  drawing = false;
+  isDrawing = false;
 });
+
+document.getElementById("revealBtn")
+  .addEventListener("click", revealCard);
+
+document.getElementById("resetBtn")
+  .addEventListener("click", setupScratch);
 
 setupScratch();
 
 window.addEventListener("resize", () => {
-  if (!revealed) setupScratch();
+  if (!isRevealed) setupScratch();
 });
 
 
 // WHATSAPP SHARING
-const message =
-  "Aabha & Jay are getting married! 💍\n" +
+const shareText =
+  "Aabha & Jay are getting married! ❤️💍\n" +
   "12 February 2027\n" +
   "The Ambez Restaurant & Banquet\n" +
-  "Join us to celebrate our special day! ❤️\n" +
+  "Join us to celebrate our special day!\n" +
   window.location.href;
 
-document.getElementById("whatsapp").href =
-  "https://wa.me/?text=" + encodeURIComponent(message);
+const whatsappURL =
+  "https://wa.me/?text=" + encodeURIComponent(shareText);
+
+document.getElementById("shareBtn").href = whatsappURL;
+document.getElementById("floatingShare").href = whatsappURL;
 
 
 // COPY WEBSITE LINK
-async function copyLink() {
-  const note = document.getElementById("copyNote");
+document.getElementById("copyBtn")
+  .addEventListener("click", async () => {
+
+  const message = document.getElementById("copyMessage");
 
   try {
     await navigator.clipboard.writeText(window.location.href);
-    note.textContent = "Invitation link copied successfully! ❤️";
-  } catch (error) {
-    note.textContent =
-      "Copy your website URL from the browser address bar.";
+    message.textContent =
+      "Invitation link copied successfully! ❤️";
+  } catch(error) {
+    message.textContent =
+      "Please copy the website address from your browser.";
   }
-}
-</script>
+});
 
+</script>
 </body>
 </html>
