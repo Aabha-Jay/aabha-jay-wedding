@@ -1,7 +1,15 @@
-AABHA & JAY — WEDDING INVITATION WEBSITE
-Extract this ZIP. Upload index.html and the complete assets folder to the root of your GitHub repository. Keep the assets folder beside index.html. Commit to main.
-Tap TAP TO BEGIN: both palace gate panels open and an original soft instrumental-style melody begins using browser audio synthesis. Browser audio starts only after the tap.
-Wedding date: 12 February 2027.
-Venue: The Ambez Restaurant & Banquet.
-Google Maps: https://maps.app.goo.gl/EPVpKRPEVHxZdZQP9
-Replace placeholder photos in assets later, keeping filenames unchanged.
+AABHA & JAY — WEDDING INVITATION
+
+1. In your GitHub repository, replace the existing index.html with this index.html.
+2. KEEP your existing assets folder in the repository. Do not delete it.
+3. Commit the change to the main branch.
+4. Wait for GitHub Pages to publish, then hard-refresh the site (Ctrl + F5).
+
+This update:
+- Keeps the palace gate opening animation and TAP TO BEGIN cover.
+- Keeps the scratch-to-reveal heart, countdown, navigation, WhatsApp share and copy-link actions.
+- Uses the invitation labels and text visible in your supplied reference screenshots.
+- Keeps Aabha & Jay, 12 February 2027, The Ambez Restaurant & Banquet and your Google Maps link.
+- Fixes the Our Story image layout so the complete image is shown without the overlapping/cropped side layers.
+
+Photo assets remain in your repository's existing assets folder so you can replace the placeholder photos later without changing the HTML filenames.

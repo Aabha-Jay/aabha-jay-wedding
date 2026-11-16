@@ -514,6 +514,59 @@ body.entrance-locked{height:100vh!important;overflow:hidden!important}
 }
 @media(prefers-reduced-motion:reduce){#grandEntrance .gate-panel,#grandEntrance .entrance-center,.scratch-area.revealed .reveal-content,.scratch-area.revealed .reveal-date{transition:none!important;animation:none!important}}
 
+
+/* ===== Final corrections based on the supplied Template 3 screenshots ===== */
+.hero { min-height: calc(100svh - 64px); }
+.hero-content { padding: 58px 20px 78px; }
+.hero h1 { margin: 18px 0 14px; }
+.hero-copy { margin: 12px 0 0; }
+.hero-date { margin-top: 24px; }
+.hero-cta, .scroll-note { display:none !important; }
+
+/* The story photo must be a single complete image, not three overlapping layers. */
+.story-photo {
+  position:relative !important;
+  min-height:0 !important;
+  height:auto !important;
+  padding:9px !important;
+  overflow:hidden !important;
+  background:#f4ecdc !important;
+  border:1px solid var(--gold-soft) !important;
+  box-shadow:var(--shadow) !important;
+}
+.story-photo::before,
+.story-photo::after { display:none !important; content:none !important; }
+.story-photo img {
+  display:block !important;
+  position:relative !important;
+  inset:auto !important;
+  width:100% !important;
+  height:auto !important;
+  max-height:620px !important;
+  object-fit:contain !important;
+  object-position:center !important;
+  border:0 !important;
+  transform:none !important;
+}
+
+/* Keep the invitation wording and reference-like proportions consistent. */
+.invitation-paper { min-height:850px; }
+.invite-verse { margin-bottom:26px; }
+.invite-copy { margin-bottom:36px; }
+.scratch-copy .section-title { max-width:1300px; margin-left:auto !important; margin-right:auto !important; }
+.scratch-area { overflow:hidden !important; }
+#scratchCanvas { touch-action:none !important; }
+
+/* Open the gates first; then allow page scrolling after the reveal has completed. */
+body.entrance-locked { height:100vh !important; overflow:hidden !important; }
+#grandEntrance { opacity:1; visibility:visible; }
+#grandEntrance.dismissed { display:none !important; }
+@media(max-width:760px) {
+  .hero { min-height:calc(100svh - 62px); }
+  .story-photo { margin:0 !important; }
+  .story-photo img { max-height:none !important; }
+}
+
 </style>
 </head>
 <body>
@@ -558,10 +611,7 @@ body.entrance-locked{height:100vh!important;overflow:hidden!important}
     <h1>Aabha <span class="amp">&</span> Jay</h1>
     <p class="hero-copy">Joyfully invite you to celebrate<br>the beginning of our forever.</p>
     <div class="hero-date">12 · FEBRUARY · 2027</div>
-    <p class="kicker" style="margin-top:25px;color:#f0dfc4">A day full of love, laughter & blessings</p>
-    <a class="hero-cta" href="#scratch">DISCOVER OUR SPECIAL DATE <span>↓</span></a>
   </div>
-  <div class="scroll-note">SCROLL TO EXPLORE</div>
 </section>
 
 <section class="invitation-section" id="invitation">
@@ -616,7 +666,7 @@ body.entrance-locked{height:100vh!important;overflow:hidden!important}
 <section class="section story-section" id="story">
   <div class="container story-grid">
     <div class="story-photo reveal">
-      <img src="assets/story-couple-placeholder.jpg" alt="Romantic wedding celebration">
+      <img src="assets/story-couple-placeholder.jpg" alt="Aabha and Jay — our story photo">
     </div>
     <div class="story-panel reveal">
       <div class="eyebrow">OUR STORY</div>
@@ -757,8 +807,10 @@ function openGrandEntrance(){
   if(grandEntrance.classList.contains("opening")||grandEntrance.classList.contains("dismissed"))return;
   startWeddingMusic();
   grandEntrance.classList.add("opening");
-  document.body.classList.remove("entrance-locked");
-  window.setTimeout(()=>grandEntrance.classList.add("dismissed"),2350);
+  window.setTimeout(()=>{
+    grandEntrance.classList.add("dismissed");
+    document.body.classList.remove("entrance-locked");
+  },2350);
 }
 openInvitation.addEventListener("click",e=>{e.stopPropagation();openGrandEntrance();});
 grandEntrance.addEventListener("click",openGrandEntrance);
