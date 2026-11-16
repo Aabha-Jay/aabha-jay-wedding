@@ -1,15 +1,20 @@
-AABHA & JAY — WEDDING INVITATION
+Aabha & Jay — Template 3 reference-style update
 
-1. In your GitHub repository, replace the existing index.html with this index.html.
-2. KEEP your existing assets folder in the repository. Do not delete it.
-3. Commit the change to the main branch.
-4. Wait for GitHub Pages to publish, then hard-refresh the site (Ctrl + F5).
+This package contains:
+- index.html
+- assets/ (local images used by the page)
 
-This update:
-- Keeps the palace gate opening animation and TAP TO BEGIN cover.
-- Keeps the scratch-to-reveal heart, countdown, navigation, WhatsApp share and copy-link actions.
-- Uses the invitation labels and text visible in your supplied reference screenshots.
-- Keeps Aabha & Jay, 12 February 2027, The Ambez Restaurant & Banquet and your Google Maps link.
-- Fixes the Our Story image layout so the complete image is shown without the overlapping/cropped side layers.
+To publish:
+1. Extract the ZIP.
+2. Replace index.html in the GitHub repository root.
+3. Upload/replace the entire assets folder from this package.
+4. Commit both index.html and assets to the branch used by GitHub Pages.
+5. Wait for GitHub Pages to finish deploying, then hard-refresh the site (Ctrl+F5).
 
-Photo assets remain in your repository's existing assets folder so you can replace the placeholder photos later without changing the HTML filenames.
+Wedding details retained:
+- Aabha & Jay
+- 12 February 2027
+- The Ambez Restaurant & Banquet
+- Venue map: https://maps.app.goo.gl/EPVpKRPEVHxZdZQP9
+
+The Our Story and event photos are editable placeholders. Replace the files in assets/ later while keeping the same filenames, or update the image src values in index.html.

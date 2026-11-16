@@ -567,6 +567,120 @@ body.entrance-locked { height:100vh !important; overflow:hidden !important; }
   .story-photo img { max-height:none !important; }
 }
 
+
+/* ===== Reference screenshot match: ShubhWeds Template 3 layout ===== */
+:root{--cream:#f8f2e6;--paper:#fffefa;--gold:#c99c19;--gold-soft:#ead9a9;--wine:#762436;--serif:"Cormorant Garamond",Georgia,serif;--script:"Great Vibes",cursive}
+html{scroll-padding-top:0}
+body{background:#f8f2e6;font-family:var(--serif);color:#554b45}
+.site-header{display:none!important}
+.progress{display:none!important}
+.back-top,.floating-share{display:none!important}
+#grandEntrance .entrance-backdrop{background-image:url("assets/ornate-gate-bow.jpg")!important;background-size:cover!important;background-position:center!important;filter:brightness(.60)!important}
+#grandEntrance .gate-panel{background-image:url("assets/ornate-gate-bow.jpg")!important;background-size:200% 100%!important}
+#grandEntrance .entrance-names{display:none!important}
+#grandEntrance .entrance-center{top:50%!important;width:min(600px,90vw)!important;padding:0!important}
+#grandEntrance .open-invitation{position:relative!important;display:inline-flex!important;flex-direction:column!important;align-items:center!important;gap:35px!important;margin:0!important;padding:0!important;border:0!important;background:transparent!important;font:400 clamp(20px,2vw,30px) var(--serif)!important;letter-spacing:5px!important;color:#fffaf0!important;text-shadow:0 2px 14px #000!important}
+#grandEntrance .open-invitation:after{content:"✥";display:grid;place-items:center;width:78px;height:78px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#d75c55 0,#8f111e 54%,#4c0710 100%);border:3px double #e5b34b;box-shadow:0 4px 18px #0008,inset 0 0 0 5px rgba(255,205,112,.15);font-size:32px;color:#f3d38b;text-shadow:0 1px 2px #4d0710}
+#grandEntrance .entrance-center:before{content:"";position:absolute;z-index:-1;inset:-40px -60px;background:radial-gradient(ellipse,rgba(0,0,0,.22),transparent 70%)}
+.hero{min-height:100svh!important;height:100svh!important;padding:0!important;background:#161d22 url("assets/palace-hero.jpg") center center/cover no-repeat!important;display:grid!important;place-items:center!important;color:#fff!important;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.22),rgba(0,0,0,.34) 52%,rgba(0,0,0,.38))!important}
+.hero:after{display:none!important}
+.hero-bow,.hero-kicker,.hero-copy,.hero-date,.hero-cta{display:none!important}
+.hero-content{z-index:2;padding:20px!important;width:100%!important}
+.hero h1{display:flex!important;flex-direction:column!important;align-items:center!important;gap:0!important;margin:0!important;font:400 clamp(68px,8vw,112px)/.86 var(--serif)!important;letter-spacing:-2px!important;color:#fff!important;text-shadow:0 3px 20px #0008}
+.hero-name{display:block!important}
+.hero-weds{display:block!important;margin:18px 0 22px!important;font:400 22px var(--serif)!important;letter-spacing:6px!important}
+.scroll-note{display:flex!important;position:absolute!important;bottom:70px!important;left:50%!important;transform:translateX(-50%)!important;flex-direction:column!important;gap:16px!important;color:#f3c900!important;font:600 20px var(--serif)!important;letter-spacing:2px!important;text-decoration:none!important;white-space:nowrap}
+.scroll-note:after{display:none!important}
+.scroll-note span{font-size:48px!important;line-height:.7!important;color:#fff!important;animation:scrollArrow 1.5s infinite ease-in-out}
+@keyframes scrollArrow{0%,100%{transform:translateY(0)}50%{transform:translateY(10px)}}
+.invitation-section{padding:42px 20px 76px!important;background:#f8f2e6!important}
+.invitation-paper{width:min(832px,100%)!important;max-width:832px!important;min-height:780px!important;margin:auto!important;padding:62px 45px 55px!important;background:#fff!important;border:1px solid #ead9aa!important;box-shadow:0 15px 42px rgba(90,65,30,.07)!important;text-align:center!important}
+.invitation-paper:before{inset:11px!important;border:1px solid #f0e3c5!important}
+.om-mark{font-size:42px!important;color:#c99c19!important;margin:0 0 24px!important}
+.invite-verse{font-size:18px!important;line-height:1.9!important;color:#655b56!important;margin:0 auto 24px!important}
+.invite-script{font:400 clamp(34px,4vw,47px) var(--script)!important;color:#762436!important;margin:18px 0 24px!important}
+.invite-copy{font:400 22px/1.9 var(--serif)!important;color:#5c534e!important;margin:0 auto 40px!important}
+.invite-names{font:400 clamp(58px,6vw,76px)/.95 var(--serif)!important;color:#762436!important;margin:12px 0!important}
+.invite-with{font:400 15px var(--serif)!important;letter-spacing:6px!important;color:#81766e!important;margin:28px 0!important}
+.invite-date{margin-top:36px!important;color:#c99c19!important;font:500 16px var(--serif)!important;letter-spacing:6px!important}
+.scratch-section{padding:76px 22px 92px!important;background:#faf5e9!important}
+.scratch-copy .section-title{font:400 clamp(34px,4vw,52px) var(--serif)!important;font-variant:small-caps!important;letter-spacing:2px!important;color:#762436!important}
+.countdown-section{padding:86px 22px 42px!important;background:#f8f2e6!important}
+.countdown-section>.container>.eyebrow{display:none!important}
+.countdown-section .section-title{font:400 clamp(44px,5vw,64px) var(--script)!important;color:#762436!important;margin:0 0 40px!important}
+.countdown-section .section-intro,.countdown-section .rule{display:none!important}
+.countdown{display:grid!important;grid-template-columns:repeat(4,minmax(110px,135px))!important;justify-content:center!important;gap:32px!important;max-width:760px!important;margin:0 auto!important}
+.time-card{padding:30px 8px 18px!important;min-height:135px!important;border-radius:9px!important;background:#fbf6ec!important;border:1px solid #eadbb8!important;box-shadow:0 12px 28px rgba(90,65,30,.05)!important}
+.time-number{font:400 54px/1 var(--serif)!important;color:#c99c19!important}
+.time-label{margin-top:17px!important;font:400 11px var(--serif)!important;letter-spacing:4px!important;color:#746a61!important}
+.story-section{padding:130px 22px 95px!important;background:#f8f2e6!important}
+.story-grid{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr)!important;gap:70px!important;align-items:center!important;max-width:1420px!important}
+.story-photo{height:560px!important;min-height:560px!important;position:relative!important;overflow:visible!important;padding:0!important;background:transparent!important;border:0!important;box-shadow:none!important;isolation:isolate!important}
+.story-photo:before,.story-photo:after{content:none!important;display:none!important}
+.story-photo img{position:absolute!important;display:block!important;object-fit:cover!important;border:1px solid #ead9aa!important;background:#fff!important;padding:8px!important;box-shadow:0 10px 30px rgba(90,65,30,.10)!important}
+.story-photo .story-layer{width:78%!important;height:78%!important;top:11%!important;opacity:.78!important;z-index:0!important}
+.story-photo .story-layer-left{left:0!important;transform:translateX(-2%)!important;object-position:center!important}
+.story-photo .story-layer-right{right:0!important;transform:translateX(2%)!important;object-position:center!important}
+.story-photo .story-main-photo{z-index:2!important;width:66%!important;height:90%!important;left:17%!important;top:5%!important;object-fit:cover!important;object-position:center!important}
+.story-panel{padding:0!important;background:transparent!important}
+.story-panel .eyebrow{display:none!important}
+.story-panel .section-title{font:400 clamp(48px,5vw,68px) var(--script)!important;color:#762436!important;margin:0 0 34px!important}
+.story-panel .rule{display:none!important}
+.story-panel p{font:400 17px/1.95 var(--serif)!important;color:#514943!important;margin:0 0 22px!important}
+.story-panel .signature{font:400 36px var(--script)!important;color:#762436!important;margin-top:22px!important}
+.events-section{padding:90px 22px!important;background:#f8f2e6!important}
+.events-section .section-heading{margin-bottom:48px!important}
+.events-section .section-heading .eyebrow{display:none!important}
+.events-section .section-title{font:400 clamp(48px,6vw,68px) var(--script)!important;color:#762436!important}
+.events-section .section-intro,.events-section .rule{display:none!important}
+.events-grid{display:grid!important;grid-template-columns:1fr!important;max-width:780px!important;gap:32px!important;margin:auto!important}
+.event-card{display:flex!important;flex-direction:column!important;overflow:hidden!important;padding:12px!important;background:#fffdf8!important;border:1px solid #ead9aa!important;border-radius:24px!important;box-shadow:0 12px 36px rgba(90,65,30,.08)!important;color:#514943!important}
+.event-content{order:0!important;padding:24px 18px 22px!important;text-align:center!important}
+.event-content .event-number{font:400 12px var(--serif)!important;letter-spacing:4px!important;color:#762436!important}
+.event-content h3{font:400 54px var(--script)!important;color:#c99c19!important;margin:12px 0!important}
+.event-content p{font:400 18px/1.7 var(--serif)!important;color:#776b63!important}
+.event-card img{position:static!important;order:1!important;width:100%!important;height:470px!important;object-fit:cover!important;object-position:center!important;border-radius:16px!important}
+.event-venue{order:2!important;text-align:center!important;padding:25px 16px 28px!important;background:transparent!important}
+.event-venue .venue-kicker{font:400 12px var(--serif)!important;letter-spacing:4px!important;color:#c99c19!important}
+.event-venue strong{display:block!important;font:400 33px var(--serif)!important;color:#c99c19!important;margin:10px 0!important}
+.event-venue span{font:400 18px/1.7 var(--serif)!important;color:#776b63!important}
+.events-note{font:16px var(--serif)!important;color:#776b63!important}
+.venue-section{padding:75px 22px 100px!important;background:#f8f2e6!important}
+.venue-section .section-heading .eyebrow,.venue-section .section-intro{display:none!important}
+.venue-section .section-title{font:400 58px var(--script)!important;color:#762436!important}
+.venue-layout{display:flex!important;flex-direction:column!important;max-width:780px!important;margin:auto!important;padding:12px!important;gap:0!important;background:#fbf6ec!important;border:1px solid #ead9aa!important;border-radius:24px!important;box-shadow:0 12px 36px rgba(90,65,30,.08)!important}
+.venue-photo{height:auto!important;min-height:0!important;width:100%!important;aspect-ratio:1.35/1!important;overflow:hidden!important;border-radius:16px!important}
+.venue-photo img{width:100%!important;height:100%!important;object-fit:cover!important}
+.venue-info{padding:26px 20px 30px!important;text-align:center!important}
+.venue-info>.eyebrow,.venue-info>.section-title{display:none!important}
+.venue-name{font:400 clamp(28px,4vw,40px) var(--serif)!important;letter-spacing:4px!important;text-transform:uppercase!important;color:#c99c19!important;margin:14px 0!important}
+.venue-info p{font:400 18px/1.8 var(--serif)!important;color:#776b63!important}
+.venue-info .button{display:inline-flex!important;border-radius:40px!important;background:transparent!important;border:1px solid #ead9aa!important;color:#c99c19!important;padding:14px 26px!important}
+.vinyl-player{z-index:120!important}
+@media(max-width:760px){
+ .hero{min-height:100svh!important;height:100svh!important}
+ .hero h1{font-size:clamp(62px,15vw,88px)!important}
+ .scroll-note{bottom:48px!important;font-size:15px!important}
+ .invitation-section{padding:22px 12px 56px!important}
+ .invitation-paper{min-height:0!important;padding:45px 22px 52px!important}
+ .invite-copy{font-size:18px!important}
+ .invite-verse{font-size:16px!important}
+ .countdown{grid-template-columns:repeat(2,minmax(110px,140px))!important;gap:14px!important}
+ .time-card{min-height:120px!important;padding:24px 6px 16px!important}
+ .time-number{font-size:48px!important}
+ .story-section{padding:70px 20px!important}
+ .story-grid{grid-template-columns:1fr!important;gap:48px!important}
+ .story-photo{height:440px!important;min-height:440px!important;width:min(460px,100%)!important;margin:0 auto!important}
+ .story-photo .story-main-photo{height:90%!important}
+ .story-panel{max-width:560px!important;margin:auto!important}
+ .story-panel .section-title{text-align:center!important}
+ .story-panel p{font-size:16px!important}
+ .event-card img{height:auto!important;aspect-ratio:1/1.15!important}
+ .venue-photo{aspect-ratio:1/1.1!important}
+}
+@media(prefers-reduced-motion:reduce){.scroll-note span{animation:none!important}}
+
 </style>
 </head>
 <body>
@@ -579,7 +693,7 @@ body.entrance-locked { height:100vh !important; overflow:hidden !important; }
   <div class="entrance-vignette"></div>
   <div class="entrance-center">
     <div class="entrance-overline" aria-hidden="true"></div>
-    <div class="entrance-names"><span>Aabha</span><small>WEDS</small><span>Jay</span></div>
+    <div class="entrance-names" aria-hidden="true"></div>
     <button class="open-invitation" id="openInvitation" type="button">TAP TO BEGIN</button>
   </div>
   <div class="entrance-corner">A & J <span>♥</span></div>
@@ -605,21 +719,18 @@ body.entrance-locked { height:100vh !important; overflow:hidden !important; }
 
 <main>
 <section class="hero" id="home">
-  <div class="hero-bow" aria-hidden="true"><span class="bow-knot"></span></div>
   <div class="hero-content">
-    <div class="kicker hero-kicker">Together with our families</div>
-    <h1>Aabha <span class="amp">&</span> Jay</h1>
-    <p class="hero-copy">Joyfully invite you to celebrate<br>the beginning of our forever.</p>
-    <div class="hero-date">12 · FEBRUARY · 2027</div>
+    <h1><span class="hero-name">Aabha</span><span class="hero-weds">WEDS</span><span class="hero-name">Jay</span></h1>
   </div>
+  <a class="scroll-note" href="#invitation">SCROLL DOWN <span aria-hidden="true">↓</span></a>
 </section>
 
 <section class="invitation-section" id="invitation">
   <div class="invitation-paper reveal">
     <div class="om-mark">ॐ</div>
-    <p class="invite-verse">With the blessings of our families<br>and the love of everyone dear to us</p>
+    <p class="invite-verse">वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ।<br>निर्विघ्नं कुरु मे देव शुभ कार्येषु सर्वदा॥</p>
     <h2 class="invite-script">We Cordially Invite You</h2>
-    <p class="invite-copy">Together with our beloved families,<br>we request the pleasure of your presence<br>to celebrate the wedding of</p>
+    <p class="invite-copy">Together with our beloved families,<br>we request the honour of your gracious<br>presence to celebrate the wedding of</p>
     <div class="invite-names">Aabha</div>
     <div class="invite-with">WITH</div>
     <div class="invite-names">Jay</div>
@@ -665,15 +776,18 @@ body.entrance-locked { height:100vh !important; overflow:hidden !important; }
 
 <section class="section story-section" id="story">
   <div class="container story-grid">
-    <div class="story-photo reveal">
-      <img src="assets/story-couple-placeholder.jpg" alt="Aabha and Jay — our story photo">
+    <div class="story-photo reveal" aria-label="Wedding photo gallery">
+      <img class="story-layer story-layer-left" src="assets/haldi-placeholder.jpg" alt="A wedding celebration photograph">
+      <img class="story-layer story-layer-right" src="assets/wedding-placeholder.jpg" alt="A wedding ceremony photograph">
+      <img class="story-main-photo" src="assets/story-couple-placeholder.jpg" alt="Aabha and Jay — our story photo">
     </div>
     <div class="story-panel reveal">
       <div class="eyebrow">OUR STORY</div>
       <h2 class="section-title">Our Story</h2>
-      <div class="rule" style="justify-content:flex-start;margin-left:0"><span>✧</span></div>
-      <p>With the love and blessings of our families, we're stepping into a beautiful new chapter. We'd be honoured to have you beside us as we celebrate a day filled with joy, traditions and memories.</p>
-      <div class="signature">With love, Aabha & Jay</div>
+      <p>Our story did not begin with years of knowing each other. It began with two hearts finding each other at exactly the right time.</p>
+      <p>From the very beginning, we found comfort in the quiet moments, joy in the unexpected ones, and a shared love for the little things that make life beautiful.</p>
+      <p>As we begin this new chapter, we feel incredibly grateful to have found in each other a partner, a best friend, and an adventure companion.</p>
+      <p>We cannot wait to celebrate the beginning of our forever with the people who mean the most to us!</p>
     </div>
   </div>
 </section>
