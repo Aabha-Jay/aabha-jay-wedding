@@ -767,6 +767,69 @@ body{background:#f8f2e6;font-family:var(--serif);color:#554b45}
  .story-panel p{font-size:17px!important}
 }
 
+
+/* Final interaction and layout corrections */
+#grandEntrance .entrance-center{
+  top:50%!important;left:50%!important;display:flex!important;flex-direction:column!important;
+  align-items:center!important;justify-content:center!important;gap:20px!important;
+  transform:translate(-50%,-50%)!important;pointer-events:none!important;
+}
+#grandEntrance .entrance-overline,#grandEntrance .entrance-names{display:none!important}
+#grandEntrance .entrance-tap-label{
+  display:block!important;color:#fff8ec!important;font:400 16px var(--serif)!important;
+  letter-spacing:5px!important;text-shadow:0 2px 12px #1b1008!important;
+}
+#grandEntrance .open-invitation{
+  pointer-events:auto!important;display:grid!important;place-items:center!important;
+  width:88px!important;height:88px!important;min-width:88px!important;min-height:88px!important;
+  margin:0!important;padding:0!important;border-radius:50%!important;
+  border:3px double #d7ad54!important;color:#f8df9b!important;
+  background:radial-gradient(circle at 35% 28%,#b52d36,#791321 65%,#4c0c17)!important;
+  box-shadow:0 0 0 5px rgba(112,20,31,.38),0 8px 28px rgba(0,0,0,.42),inset 0 0 12px rgba(255,221,139,.45)!important;
+  font:400 35px var(--serif)!important;letter-spacing:0!important;cursor:pointer!important;
+  transition:transform .25s ease,box-shadow .25s ease!important;
+}
+#grandEntrance .open-invitation:hover{
+  transform:scale(1.07)!important;box-shadow:0 0 0 7px rgba(112,20,31,.35),0 10px 32px rgba(0,0,0,.5)!important;
+}
+#grandEntrance.opening .entrance-tap-label{opacity:0;transition:opacity .35s ease}
+#grandEntrance.opening .open-invitation{opacity:0;transform:scale(.72)!important;transition:opacity .35s ease,transform .5s ease!important}
+#grandEntrance .gate-panel{will-change:transform!important;transform-style:preserve-3d!important}
+#grandEntrance.opening .gate-left{transform:translateX(-103%) rotateY(7deg)!important}
+#grandEntrance.opening .gate-right{transform:translateX(103%) rotateY(-7deg)!important}
+#grandEntrance.opening .entrance-backdrop{transform:scale(1.09)!important;filter:brightness(.88)!important;transition:transform 2.25s ease,filter 1.4s ease!important}
+#grandEntrance.dismissed{pointer-events:none!important}
+.hero-kicker,.hero-copy,.hero-date{display:none!important}
+.hero h1{display:flex!important;flex-direction:column!important;align-items:center!important;gap:0!important;margin:0!important;font:400 clamp(76px,12vw,145px)/.82 var(--serif)!important;letter-spacing:-2px!important;color:#fffaf0!important}
+.hero h1 .hero-weds{display:block!important;font:400 15px var(--serif)!important;letter-spacing:7px!important;color:#fff7e9!important;margin:18px 0 24px!important}
+.hero h1 .hero-name{display:block!important}
+.hero .hero-content{padding:60px 20px!important}
+.story-photo{perspective:1000px!important}
+.story-photo img{will-change:transform!important}
+.story-photo .story-layer-left{animation:storyDriftLeft 6.5s ease-in-out infinite!important}
+.story-photo .story-layer-right{animation:storyDriftRight 7.5s ease-in-out infinite!important}
+.story-photo .story-main-photo{animation:storyMainFloat 5.8s ease-in-out infinite!important}
+@keyframes storyDriftLeft{
+  0%,100%{transform:translate3d(-2%,0,0) rotate(-5deg)}
+  50%{transform:translate3d(-7%,-2%,0) rotate(-8deg)}
+}
+@keyframes storyDriftRight{
+  0%,100%{transform:translate3d(2%,0,0) rotate(5deg)}
+  50%{transform:translate3d(7%,2%,0) rotate(8deg)}
+}
+@keyframes storyMainFloat{
+  0%,100%{transform:translate3d(0,0,0)}
+  50%{transform:translate3d(0,-8px,0)}
+}
+@media(max-width:760px){
+  #grandEntrance .entrance-tap-label{font-size:13px!important;letter-spacing:4px!important}
+  #grandEntrance .open-invitation{width:76px!important;height:76px!important;min-width:76px!important;min-height:76px!important}
+  .hero h1{font-size:clamp(70px,17vw,105px)!important}
+}
+@media(prefers-reduced-motion:reduce){
+  .story-photo .story-layer-left,.story-photo .story-layer-right,.story-photo .story-main-photo{animation:none!important}
+}
+
 </style>
 </head>
 <body>
@@ -778,9 +841,8 @@ body{background:#f8f2e6;font-family:var(--serif);color:#554b45}
   <div class="gate-panel gate-right"></div>
   <div class="entrance-vignette"></div>
   <div class="entrance-center">
-    <div class="entrance-overline">AABHA WEDS JAY</div>
-    <div class="entrance-names" aria-hidden="true"><span>Aabha</span><small>WEDS</small><span>Jay</span></div>
-    <button class="open-invitation" id="openInvitation" type="button">TAP TO BEGIN</button>
+    <div class="entrance-tap-label">TAP TO BEGIN</div>
+    <button class="open-invitation" id="openInvitation" type="button" aria-label="Open the wedding invitation"><span aria-hidden="true">✥</span></button>
   </div>
   <div class="entrance-corner">A & J <span>♥</span></div>
 </div>
@@ -806,10 +868,7 @@ body{background:#f8f2e6;font-family:var(--serif);color:#554b45}
 <main>
 <section class="hero" id="home">
   <div class="hero-content">
-    <div class="hero-kicker">TOGETHER WITH OUR FAMILIES</div>
-    <h1><span class="hero-name">Aabha</span><span class="hero-weds">&</span><span class="hero-name">Jay</span></h1>
-    <p class="hero-copy">Joyfully invite you to celebrate<br>the beginning of our forever.</p>
-    <div class="hero-date">12&nbsp; · &nbsp;FEBRUARY&nbsp; · &nbsp;2027</div>
+    <h1><span class="hero-name">Aabha</span><span class="hero-weds">WEDS</span><span class="hero-name">Jay</span></h1>
   </div>
   <a class="scroll-note" href="#invitation">SCROLL DOWN <span aria-hidden="true">↓</span></a>
 </section>
@@ -865,8 +924,10 @@ body{background:#f8f2e6;font-family:var(--serif);color:#554b45}
 
 <section class="section story-section" id="story">
   <div class="container story-grid">
-    <div class="story-photo reveal" aria-label="Wedding photograph placeholder">
-      <img class="story-main-photo" src="assets/story-couple-placeholder.jpg" alt="Replace with Aabha and Jay wedding photograph">
+    <div class="story-photo reveal" aria-label="Aabha and Jay wedding photographs">
+      <img class="story-layer story-layer-left" src="assets/story-couple-placeholder.jpg" alt="" aria-hidden="true">
+      <img class="story-layer story-layer-right" src="assets/story-couple-placeholder.jpg" alt="" aria-hidden="true">
+      <img class="story-main-photo" src="assets/story-couple-placeholder.jpg" alt="Aabha and Jay together">
     </div>
     <div class="story-panel reveal">
       <div class="eyebrow">OUR STORY</div>
