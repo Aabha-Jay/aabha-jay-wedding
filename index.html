@@ -830,6 +830,26 @@ body{background:#f8f2e6;font-family:var(--serif);color:#554b45}
   .story-photo .story-layer-left,.story-photo .story-layer-right,.story-photo .story-main-photo{animation:none!important}
 }
 
+
+/* Event invitations follow the narrow, portrait-card layout in the reference */
+.events-section{padding:78px 22px 100px!important;background:#f8f2e6!important}
+.events-section .section-heading{display:none!important}
+.events-grid{display:flex!important;flex-direction:column!important;align-items:center!important;gap:34px!important;max-width:100%!important}
+.event-card{width:min(390px,100%)!important;min-height:0!important;border-radius:12px!important;padding:12px!important;animation:none!important}
+.event-content{padding:14px 12px 20px!important}
+.event-content .event-number{font-size:10px!important;letter-spacing:3px!important}
+.event-content h3{font-size:39px!important;margin:2px 0 8px!important}
+.event-content p{font-size:15px!important;margin:0 auto!important}
+.event-card img{height:auto!important;aspect-ratio: .72 / 1!important;object-fit:cover!important}
+.event-venue{padding:20px 10px 16px!important}
+.event-venue .venue-kicker{font-size:9px!important;letter-spacing:3px!important}
+.event-venue strong{font-size:25px!important;letter-spacing:2px!important}
+.event-venue span{display:block!important;font-size:14px!important;line-height:1.55!important}
+.event-map-link{display:inline-flex!important;align-items:center!important;justify-content:center!important;margin-top:14px!important;padding:9px 18px!important;border:1px solid #ead9aa!important;border-radius:30px!important;color:#c99c19!important;text-decoration:none!important;font:400 10px var(--serif)!important;letter-spacing:2px!important}
+.event-map-link:hover{background:#f7edd7!important}
+.events-note{display:none!important}
+@media(max-width:560px){.event-card{width:min(370px,100%)!important}.event-card img{aspect-ratio:.72/1!important}}
+
 </style>
 </head>
 <body>
@@ -859,7 +879,7 @@ body{background:#f8f2e6;font-family:var(--serif);color:#554b45}
       <a href="#countdown">COUNTDOWN</a>
       <a href="#story">OUR STORY</a>
       <a href="#events">CELEBRATIONS</a>
-      <a href="#venue">VENUE</a>
+      <a href="#events">VENUE</a>
       <a class="nav-rsvp" href="#closing">JOIN OUR DAY</a>
     </nav>
   </div>
@@ -953,7 +973,7 @@ body{background:#f8f2e6;font-family:var(--serif);color:#554b45}
       <article class="event-card reveal">
         <div class="event-content"><div class="event-number">A SPECIAL CELEBRATION</div><h3>Haldi</h3><p>Sunshine, smiles and beautiful yellow moments.</p></div>
         <img src="assets/haldi-placeholder.jpg" alt="Festive Indian wedding decor">
-        <div class="event-venue"><div class="venue-kicker">CELEBRATION DETAILS</div><strong>Aabha & Jay</strong><span>12 February 2027 · The Ambez Restaurant & Banquet</span></div>
+        <div class="event-venue"><div class="venue-kicker">CELEBRATION DETAILS</div><strong>Aabha & Jay</strong><span>12 February 2027 · The Ambez Restaurant &amp; Banquet</span><a class="event-map-link" href="https://maps.app.goo.gl/EPVpKRPEVHxZdZQP9" target="_blank" rel="noopener">⌖ &nbsp; VIEW ON MAPS</a></div>
       </article>
       <article class="event-card reveal">
         <div class="event-content"><div class="event-number">A SPECIAL CELEBRATION</div><h3>Mehendi</h3><p>Colours, creativity and memories filled with love.</p></div>
@@ -969,29 +989,6 @@ body{background:#f8f2e6;font-family:var(--serif);color:#554b45}
     <p class="events-note">More celebration details will be shared soon.</p>
   </div>
 </section>
-
-<section class="section venue-section" id="venue">
-  <div class="container">
-    <div class="section-heading reveal">
-      <div class="eyebrow">Venue</div>
-      <h2 class="section-title">Venue</h2>
-      <p class="section-intro">We look forward to welcoming you and celebrating this special day together.</p>
-    </div>
-    <div class="venue-layout reveal">
-      <div class="venue-photo">
-        <img src="assets/venue-placeholder.jpg" alt="Elegant wedding banquet venue">
-      </div>
-      <div class="venue-info">
-        <div class="eyebrow">Join us on our special day</div>
-        <h2 class="section-title">A place for<br>beautiful memories.</h2>
-        <div class="venue-name">The Ambez Restaurant & Banquet</div>
-        <p>12 February 2027<br>Come celebrate love, laughter and the beginning of our forever.</p>
-        <a class="button" href="https://maps.app.goo.gl/EPVpKRPEVHxZdZQP9" target="_blank" rel="noopener">⌖ &nbsp; GET DIRECTIONS</a>
-      </div>
-    </div>
-  </div>
-</section>
-
 
 <section class="blessings-section" id="blessings">
   <div class="blessings-card reveal">
