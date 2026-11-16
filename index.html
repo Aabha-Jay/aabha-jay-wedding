@@ -456,91 +456,78 @@ body{background:var(--cream);font-family:var(--serif);color:var(--ink)}
 }
 
 
-/* Full-screen grand entrance — composition tuned to the supplied Template 3 screenshot */
-html,body{margin:0!important;padding:0!important}
-body.entrance-locked{height:100vh;overflow:hidden!important}
-#grandEntrance.grand-entrance{
- position:fixed!important;inset:0!important;width:100vw!important;height:100svh!important;
- min-height:100vh!important;z-index:99999!important;overflow:hidden!important;
- display:block!important;background:#1b130e!important;color:#fff!important;
- isolation:isolate!important;cursor:pointer!important;
-}
-#grandEntrance .entrance-backdrop{
- position:absolute!important;inset:0!important;z-index:0!important;
- background:#21170f!important;filter:none!important;transform:none!important;
-}
-#grandEntrance .gate-panel{
- position:absolute!important;top:0!important;bottom:0!important;width:50.15%!important;
- height:100%!important;z-index:2!important;
- background-image:url("assets/ornate-gate-bow.jpg")!important;
- background-size:200% 100%!important;background-repeat:no-repeat!important;
- box-shadow:none!important;border:0!important;
- transition:transform 2.25s cubic-bezier(.77,0,.18,1)!important;
- backface-visibility:hidden!important;
-}
-#grandEntrance .gate-left{left:0!important;right:auto!important;background-position:left center!important;transform-origin:left center!important}
-#grandEntrance .gate-right{right:0!important;left:auto!important;background-position:right center!important;transform-origin:right center!important}
-#grandEntrance .entrance-vignette{
- position:absolute!important;inset:0!important;z-index:3!important;pointer-events:none!important;
- background:linear-gradient(180deg,rgba(13,8,4,.24),rgba(13,8,4,.16) 48%,rgba(13,8,4,.28))!important;
-}
-#grandEntrance .entrance-center{
- position:absolute!important;z-index:4!important;left:50%!important;top:43%!important;
- transform:translate(-50%,-50%)!important;width:min(720px,92vw)!important;
- margin:0!important;padding:0!important;text-align:center!important;
- background:none!important;border-radius:0!important;box-shadow:none!important;
- text-shadow:0 2px 16px rgba(0,0,0,.52)!important;transition:opacity .55s ease,transform .8s ease!important;
-}
-#grandEntrance .entrance-overline{display:none!important}
-#grandEntrance .entrance-names{
- display:flex!important;flex-direction:column!important;align-items:center!important;
- gap:0!important;margin:0!important;padding:0!important;
- font-family:"Cormorant Garamond",Georgia,serif!important;
- font-size:clamp(68px,8.2vw,112px)!important;font-weight:400!important;
- line-height:.78!important;letter-spacing:-2px!important;color:#fffaf0!important;
-}
+/* FINAL TEMPLATE 3 MATCH */
+#grandEntrance.grand-entrance{position:fixed!important;inset:0!important;width:100vw!important;height:100vh!important;height:100svh!important;min-height:100svh!important;z-index:99999!important;display:block!important;overflow:hidden!important;background:#1b120b!important;cursor:pointer!important}
+#grandEntrance .entrance-backdrop{position:absolute!important;inset:0!important;background-image:url("assets/ornate-gate-bow.jpg")!important;background-size:cover!important;background-position:center center!important;filter:brightness(.58)!important;z-index:0!important}
+#grandEntrance .gate-panel{position:absolute!important;top:0!important;bottom:0!important;width:50.15%!important;height:100%!important;background-image:url("assets/ornate-gate-bow.jpg")!important;background-size:200% 100%!important;background-repeat:no-repeat!important;box-shadow:none!important;border:0!important;z-index:2!important;transition:transform 2.25s cubic-bezier(.77,0,.18,1)!important;backface-visibility:hidden!important}
+#grandEntrance .gate-left{left:0!important;right:auto!important;background-position:left center!important}
+#grandEntrance .gate-right{right:0!important;left:auto!important;background-position:right center!important}
+#grandEntrance .entrance-vignette{position:absolute!important;inset:0!important;z-index:3!important;background:linear-gradient(180deg,rgba(12,7,3,.2),rgba(12,7,3,.08) 45%,rgba(12,7,3,.25))!important;pointer-events:none!important}
+#grandEntrance .entrance-center{position:absolute!important;z-index:4!important;left:50%!important;top:42%!important;transform:translate(-50%,-50%)!important;width:min(680px,92vw)!important;margin:0!important;padding:20px!important;background:transparent!important;box-shadow:none!important;border:0!important;text-align:center!important;text-shadow:0 2px 18px rgba(0,0,0,.6)!important;transition:opacity .6s ease,transform .8s ease!important}
+#grandEntrance .entrance-overline,#grandEntrance .entrance-date,#grandEntrance .entrance-hint{display:none!important}
+#grandEntrance .entrance-names{display:flex!important;flex-direction:column!important;align-items:center!important;gap:0!important;margin:0!important;padding:0!important;font:400 clamp(76px,10vw,132px)/.82 var(--serif)!important;letter-spacing:-2px!important;color:#fffaf0!important}
 #grandEntrance .entrance-names span{display:block!important;color:#fffaf0!important}
-#grandEntrance .entrance-names small{
- display:block!important;margin:28px 0 24px!important;
- font:400 clamp(12px,1.4vw,17px) "Cormorant Garamond",Georgia,serif!important;
- letter-spacing:7px!important;color:#fff7e8!important;
-}
-#grandEntrance .entrance-date{display:none!important}
-#grandEntrance .open-invitation{display:none!important}
-#grandEntrance .entrance-hint{display:none!important}
-#grandEntrance .entrance-corner{display:none!important}
-#grandEntrance.opening .gate-left{transform:translateX(-101%) rotateY(0deg)!important}
-#grandEntrance.opening .gate-right{transform:translateX(101%) rotateY(0deg)!important}
+#grandEntrance .entrance-names small{display:block!important;margin:25px 0 24px!important;font:400 clamp(12px,1.3vw,16px) var(--serif)!important;letter-spacing:7px!important;color:#fff7e9!important}
+#grandEntrance .open-invitation{display:inline-flex!important;margin:42px 0 0!important;padding:12px 24px!important;border:1px solid rgba(255,245,224,.72)!important;background:rgba(35,22,12,.12)!important;color:#fffaf0!important;font:400 12px var(--serif)!important;letter-spacing:4px!important;border-radius:0!important;box-shadow:none!important;cursor:pointer!important}
+#grandEntrance .open-invitation:hover{background:rgba(255,250,240,.16)!important}
+#grandEntrance.opening .gate-left{transform:translateX(-101%)!important}
+#grandEntrance.opening .gate-right{transform:translateX(101%)!important}
 #grandEntrance.opening .entrance-center{opacity:0!important;transform:translate(-50%,-50%) scale(.94)!important}
-#grandEntrance.opening .entrance-vignette{opacity:0!important;transition:opacity 1.2s ease!important}
+#grandEntrance.opening .entrance-vignette{opacity:0!important;transition:opacity 1.25s ease!important}
 #grandEntrance.dismissed{opacity:0!important;visibility:hidden!important;pointer-events:none!important;transition:opacity .8s ease,visibility .8s!important}
+body.entrance-locked{height:100vh!important;overflow:hidden!important}
+.scratch-section{background:radial-gradient(ellipse at 50% 48%,#fffefa 0%,#fbf6ec 72%)!important;padding:90px 22px 105px!important}
+.scratch-layout{display:flex!important;flex-direction:column!important;align-items:center!important;gap:38px!important;max-width:100%!important}
+.scratch-copy{text-align:center!important;max-width:1250px!important;margin:auto!important}
+.scratch-copy .eyebrow{font:400 13px var(--serif)!important;letter-spacing:5px!important;text-transform:uppercase!important;color:var(--gold)!important}
+.scratch-copy .section-title{font:400 clamp(32px,4.2vw,52px) var(--serif)!important;font-variant:small-caps!important;letter-spacing:2.5px!important;color:#762f32!important;margin:18px 0 0!important}
+.scratch-copy .rule,.scratch-copy p{display:none!important}
+.scratch-card{width:min(570px,92vw)!important;max-width:570px!important;padding:0!important;margin:auto!important;background:transparent!important;border:0!important;box-shadow:none!important;transform:none!important}
+.scratch-area{position:relative!important;width:100%!important;height:auto!important;aspect-ratio:1.055/1!important;overflow:hidden!important;margin:0 auto!important;background:transparent!important;filter:drop-shadow(0 14px 24px rgba(142,106,20,.13))!important;touch-action:none!important}
+.reveal-content{position:absolute!important;inset:0!important;display:flex!important;align-items:center!important;justify-content:center!important;clip-path:url(#heartClip)!important;border:0!important;background:#fff!important;z-index:1!important}
+.reveal-date{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:18px!important;font:400 clamp(31px,4.2vw,47px)/1.05 var(--serif)!important;color:#bf8d19!important;letter-spacing:.5px!important;text-align:center!important}
+#scratchCanvas{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;z-index:2!important;clip-path:url(#heartClip)!important;cursor:crosshair!important}
+.scratch-hint{position:relative!important;top:auto!important;left:auto!important;transform:none!important;width:100%!important;margin:28px auto 0!important;display:block!important;text-align:center!important;font:400 15px var(--serif)!important;letter-spacing:4px!important;color:#9d5862!important;text-shadow:none!important;pointer-events:none!important}
+.scratch-celebration{position:absolute!important;inset:-8% -8% 0!important;z-index:5!important;pointer-events:none!important;overflow:visible!important}
+.gold-confetti{position:absolute;left:var(--x);top:48%;width:8px;height:8px;background:#d7ae2c;opacity:0;animation:goldConfetti 1.9s ease-out var(--delay) forwards}
+.gold-confetti:nth-child(3n){width:5px;height:12px;background:#f0d98c}
+.gold-confetti:nth-child(3n + 1){border-radius:50%;width:6px;height:6px;background:#e6c45e}
+.scratch-area.revealed .reveal-content{animation:heartReveal .9s cubic-bezier(.2,.8,.2,1) both}
+.scratch-area.revealed .reveal-date{animation:dateReveal .9s .12s cubic-bezier(.2,.8,.2,1) both}
+@keyframes heartReveal{0%{transform:scale(.92);filter:brightness(.9)}55%{transform:scale(1.055);filter:brightness(1.08)}100%{transform:scale(1);filter:brightness(1)}}
+@keyframes dateReveal{0%{opacity:0;transform:translateY(18px) scale(.88)}100%{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes goldConfetti{0%{opacity:0;transform:translate3d(0,0,0) rotate(0) scale(.5)}15%{opacity:1}100%{opacity:0;transform:translate3d(var(--drift),-240px,0) rotate(var(--spin)) scale(1)}}
+.countdown-section{background:linear-gradient(135deg,#faf5e9,#f6efdf)!important;color:var(--ink)!important}
+.countdown-section .section-title{color:var(--wine)!important}.countdown-section .section-intro{color:#71655e!important}
+.time-card{background:#fbf6ec!important;border:1px solid #eadbb8!important;border-radius:11px!important;box-shadow:0 15px 35px rgba(90,65,30,.06)!important}
+.time-number{color:var(--gold)!important}.time-label{color:#746a61!important}
 @media(max-width:700px){
- #grandEntrance .entrance-center{top:43%!important;width:94vw!important}
- #grandEntrance .entrance-names{font-size:clamp(60px,15vw,88px)!important}
- #grandEntrance .entrance-names small{margin:22px 0 19px!important;letter-spacing:5px!important}
+ #grandEntrance .entrance-center{top:42%!important;width:95vw!important}
+ #grandEntrance .entrance-names{font-size:clamp(66px,15vw,96px)!important}
+ #grandEntrance .entrance-names small{margin:21px 0!important;letter-spacing:5px!important}
+ #grandEntrance .open-invitation{margin-top:34px!important}
+ .scratch-section{padding:68px 14px 80px!important}
+ .scratch-copy .section-title{font-size:clamp(28px,7.6vw,40px)!important}
+ .scratch-card{width:min(500px,94vw)!important}
+ .scratch-hint{font-size:13px!important;letter-spacing:3px!important;margin-top:22px!important}
+ .reveal-date{gap:13px!important;font-size:clamp(27px,7vw,39px)!important}
 }
-@media(prefers-reduced-motion:reduce){
- #grandEntrance .gate-panel,#grandEntrance .entrance-center{transition:none!important}
-}
+@media(prefers-reduced-motion:reduce){#grandEntrance .gate-panel,#grandEntrance .entrance-center,.scratch-area.revealed .reveal-content,.scratch-area.revealed .reveal-date{transition:none!important;animation:none!important}}
 
 </style>
 </head>
 <body>
 <svg aria-hidden="true" width="0" height="0" style="position:absolute"><defs><clipPath id="heartClip" clipPathUnits="objectBoundingBox"><path d="M .5 .97 C .44 .85 .08 .58 .08 .34 C .08 .13 .31 .05 .5 .29 C .69 .05 .92 .13 .92 .34 C .92 .58 .56 .85 .5 .97 Z"/></clipPath></defs></svg>
 
-<div class="grand-entrance" id="grandEntrance" role="button" tabindex="0" aria-label="Tap to open Aabha and Jay wedding invitation">
+<div class="grand-entrance" id="grandEntrance" aria-label="Aabha weds Jay. Tap to begin.">
   <div class="entrance-backdrop"></div>
   <div class="gate-panel gate-left"></div>
   <div class="gate-panel gate-right"></div>
   <div class="entrance-vignette"></div>
   <div class="entrance-center">
-    <div class="entrance-overline">A BEAUTIFUL BEGINNING</div>
+    <div class="entrance-overline" aria-hidden="true"></div>
     <div class="entrance-names"><span>Aabha</span><small>WEDS</small><span>Jay</span></div>
-    <p class="entrance-date">12 · FEBRUARY · 2027</p>
-    <button class="open-invitation" id="openInvitation" type="button">
-      <span class="open-icon">✧</span> OPEN YOUR INVITATION <span class="open-icon">✧</span>
-    </button>
-    <div class="entrance-hint">A little celebration awaits</div>
+    <button class="open-invitation" id="openInvitation" type="button">TAP TO BEGIN</button>
   </div>
   <div class="entrance-corner">A & J <span>♥</span></div>
 </div>
@@ -593,27 +580,19 @@ body.entrance-locked{height:100vh;overflow:hidden!important}
 <section class="section scratch-section" id="scratch">
   <div class="container scratch-layout">
     <div class="scratch-copy reveal">
-      <div class="eyebrow">A SPECIAL SURPRISE</div>
+      <div class="eyebrow">A Special Surprise</div>
       <h2 class="section-title">Scratch the heart to reveal our wedding date</h2>
-      <div class="rule"><span>✧</span></div>
-      <p>A little surprise awaits. Scratch the golden heart to reveal our wedding date.</p>
-      <p style="font-family:var(--serif);font-style:italic;font-size:21px;color:var(--wine)">We can't wait to celebrate with you.</p>
     </div>
     <div class="reveal">
       <div class="scratch-card">
         <div class="scratch-area" id="scratchArea">
           <div class="reveal-content">
-            <div class="reveal-date">12 February 2027</div>
-            <div class="reveal-label">SAVE THE DATE ♡</div>
+            <div class="reveal-date"><span>12</span><span>FEBRUARY</span><span>2027</span></div>
           </div>
           <canvas id="scratchCanvas" aria-label="Scratch this card to reveal the wedding date"></canvas>
-          <div class="scratch-hint" id="scratchHint">SCRATCH TO REVEAL! ✨</div>
-        </div>
-        <div class="scratch-actions">
-          <button class="button" id="revealBtn" type="button">REVEAL DATE</button>
-          <button class="button outline" id="resetBtn" type="button">RESET CARD</button>
-        </div>
-        <p class="small-note">Use your finger or mouse to uncover the golden card.</p>
+          </div>
+        <div class="scratch-hint" id="scratchHint">SCRATCH TO REVEAL! ✨</div>
+        <div class="scratch-celebration" id="scratchCelebration" aria-hidden="true"></div>
       </div>
     </div>
   </div>
@@ -621,7 +600,7 @@ body.entrance-locked{height:100vh;overflow:hidden!important}
 
 <section class="section countdown-section" id="countdown">
   <div class="container">
-    <div class="eyebrow" style="color:#e3c79b">The countdown begins</div>
+    <div class="eyebrow" style="color:#e3c79b">The Big Day Approaches</div>
     <h2 class="section-title">The Big Day Approaches</h2>
     <p class="section-intro">Every moment brings us closer to our beautiful new beginning.</p>
     <div class="rule"><span>✧</span></div>
@@ -654,7 +633,7 @@ body.entrance-locked{height:100vh;overflow:hidden!important}
 <section class="section events-section" id="events">
   <div class="container">
     <div class="section-heading reveal">
-      <div class="eyebrow">WEDDING EVENTS</div>
+      <div class="eyebrow">Wedding Events</div>
       <h2 class="section-title">Wedding Events</h2>
       <p class="section-intro">Beautiful traditions, happy moments and memories to cherish forever.</p>
       <div class="rule"><span>✧</span></div>
@@ -683,8 +662,8 @@ body.entrance-locked{height:100vh;overflow:hidden!important}
 <section class="section venue-section" id="venue">
   <div class="container">
     <div class="section-heading reveal">
-      <div class="eyebrow">Where we celebrate</div>
-      <h2 class="section-title">The Wedding Venue</h2>
+      <div class="eyebrow">Venue</div>
+      <h2 class="section-title">Venue</h2>
       <p class="section-intro">We look forward to welcoming you and celebrating this special day together.</p>
     </div>
     <div class="venue-layout reveal">
@@ -706,15 +685,15 @@ body.entrance-locked{height:100vh;overflow:hidden!important}
 <section class="blessings-section" id="blessings">
   <div class="blessings-card reveal">
     <h2 class="section-title">With Blessings From</h2>
-    <p class="blessing-line"><strong>OUR FAMILIES</strong>With love, support and blessings</p>
-    <p class="blessing-line"><strong>OUR LOVED ONES</strong>Thank you for being part of our journey</p>
-    <p class="blessing-line"><strong>OUR DEAR FRIENDS</strong>Your presence will make our celebration complete</p>
+    <p class="blessing-line"><strong>Our Families</strong>With love, support and blessings</p>
+    <p class="blessing-line"><strong>Our Loved Ones</strong>Thank you for being part of our journey</p>
+    <p class="blessing-line"><strong>Our Dear Friends</strong>Your presence will make our celebration complete</p>
   </div>
 </section>
 
 <section class="closing" id="closing">
   <div class="container reveal">
-    <div class="eyebrow">A beautiful beginning</div>
+    <div class="eyebrow">Thank You</div>
     <div class="closing-names">Aabha & Jay</div>
     <div class="rule"><span>♡</span></div>
     <h2 class="section-title" style="font-size:clamp(34px,5vw,48px)">Your Presence Is Our Present</h2>
@@ -744,21 +723,46 @@ body.entrance-locked{height:100vh;overflow:hidden!important}
 
 <script>
 
-// Grand entrance: the palace gates open before the invitation is revealed.
+// Tap to begin: open both palace gates and start an original soft instrumental melody.
 document.body.classList.add("entrance-locked");
 const grandEntrance=document.getElementById("grandEntrance");
 const openInvitation=document.getElementById("openInvitation");
+let weddingAudioContext=null,musicTimer=null;
+function startWeddingMusic(){
+  try{
+    const AC=window.AudioContext||window.webkitAudioContext;if(!AC)return;
+    if(!weddingAudioContext)weddingAudioContext=new AC();
+    if(weddingAudioContext.state==="suspended")weddingAudioContext.resume();
+    if(musicTimer)return;
+    const notes=[523.25,659.25,783.99,659.25,587.33,698.46,880,698.46];
+    const note=(freq,when,dur,vol)=>{
+      const o=weddingAudioContext.createOscillator(),g=weddingAudioContext.createGain();
+      const o2=weddingAudioContext.createOscillator(),g2=weddingAudioContext.createGain();
+      o.type="sine";o.frequency.setValueAtTime(freq,when);
+      o2.type="sine";o2.frequency.setValueAtTime(freq*2.01,when);
+      g.gain.setValueAtTime(.0001,when);g.gain.exponentialRampToValueAtTime(vol,when+.08);g.gain.exponentialRampToValueAtTime(.0001,when+dur);
+      g2.gain.setValueAtTime(.0001,when);g2.gain.exponentialRampToValueAtTime(vol*.15,when+.1);g2.gain.exponentialRampToValueAtTime(.0001,when+dur*.8);
+      o.connect(g);g.connect(weddingAudioContext.destination);o2.connect(g2);g2.connect(weddingAudioContext.destination);
+      o.start(when);o2.start(when);o.stop(when+dur+.03);o2.stop(when+dur+.03);
+    };
+    const phrase=()=>{
+      const t=weddingAudioContext.currentTime+.04;
+      notes.forEach((n,i)=>note(n,t+i*.48,1.45,.04));
+      [261.63,329.63,392,329.63].forEach((n,i)=>note(n,t+i*.96,2.8,.016));
+    };
+    phrase();musicTimer=window.setInterval(phrase,3900);
+  }catch(e){}
+}
 function openGrandEntrance(){
-  if(grandEntrance.classList.contains("opening") || grandEntrance.classList.contains("dismissed"))return;
+  if(grandEntrance.classList.contains("opening")||grandEntrance.classList.contains("dismissed"))return;
+  startWeddingMusic();
   grandEntrance.classList.add("opening");
   document.body.classList.remove("entrance-locked");
-  window.setTimeout(()=>grandEntrance.classList.add("dismissed"),2300);
+  window.setTimeout(()=>grandEntrance.classList.add("dismissed"),2350);
 }
-openInvitation.addEventListener("click",(event)=>{event.stopPropagation();openGrandEntrance();});
+openInvitation.addEventListener("click",e=>{e.stopPropagation();openGrandEntrance();});
 grandEntrance.addEventListener("click",openGrandEntrance);
-grandEntrance.addEventListener("keydown",(event)=>{
-  if(event.key==="Enter" || event.key===" "){event.preventDefault();openGrandEntrance();}
-});
+grandEntrance.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();openGrandEntrance();}});
 
 // Mobile navigation
 const menuBtn = document.getElementById("menuBtn");
@@ -836,6 +840,8 @@ const scratchArea=document.getElementById("scratchArea");
 const scratchHint=document.getElementById("scratchHint");
 let isDrawing=false,isRevealed=false;
 function setupScratch(){
+  scratchArea.classList.remove("revealed");
+  const holder=document.getElementById("scratchCelebration");if(holder){holder.innerHTML="";delete holder.dataset.created;}
   const rect=scratchArea.getBoundingClientRect();
   if(!rect.width||!rect.height)return;
   const dpr=Math.min(window.devicePixelRatio||1,2);
@@ -881,9 +887,25 @@ function scratch(event){
   const x=event.clientX-rect.left,y=event.clientY-rect.top;
   ctx.beginPath();ctx.arc(x,y,25,0,Math.PI*2);ctx.fill();
 }
+function createScratchCelebration(){
+  const holder=document.getElementById("scratchCelebration");
+  if(!holder||holder.dataset.created)return;
+  holder.dataset.created="true";
+  for(let i=0;i<34;i++){
+    const bit=document.createElement("span");
+    bit.className="gold-confetti";
+    bit.style.setProperty("--x",Math.random()*100+"%");
+    bit.style.setProperty("--delay",Math.random()*.55+"s");
+    bit.style.setProperty("--drift",(Math.random()-.5)*180+"px");
+    bit.style.setProperty("--spin",(Math.random()*540-270)+"deg");
+    holder.appendChild(bit);
+  }
+}
 function revealCard(){
   if(isRevealed)return;
   isRevealed=true;isDrawing=false;
+  scratchArea.classList.add("revealed");
+  createScratchCelebration();
   canvas.style.transition="opacity .45s ease";
   canvas.style.opacity="0";
   scratchHint.style.display="none";
@@ -905,8 +927,7 @@ canvas.addEventListener("pointerdown",event=>{
 canvas.addEventListener("pointermove",scratch);
 canvas.addEventListener("pointerup",()=>{if(!isDrawing)return;isDrawing=false;checkScratchProgress();});
 canvas.addEventListener("pointercancel",()=>{isDrawing=false;});
-document.getElementById("revealBtn").addEventListener("click",revealCard);
-document.getElementById("resetBtn").addEventListener("click",setupScratch);
+
 setupScratch();
 let resizeFrame;
 window.addEventListener("resize",()=>{

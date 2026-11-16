@@ -1,20 +1,7 @@
-Aabha & Jay Wedding Invitation — Template 3 inspired
-
-Files:
-- index.html
-- assets/ (temporary images cropped from the reference screenshots supplied in the conversation)
-
-Publish:
-1. Upload index.html and the complete assets folder to the root of the GitHub repository.
-2. Keep the folder name exactly `assets`.
-3. Commit to the branch configured for GitHub Pages.
-
-Temporary photo note:
-The supplied ShubhWeds screenshot crops are being used as temporary visual placeholders for now.
-Replace the images in assets/ with your own Aabha & Jay photos later, keeping the same filenames:
-- story-couple-placeholder.jpg
-- haldi-placeholder.jpg
-- mehndi-placeholder.jpg
-- wedding-placeholder.jpg
-- venue-placeholder.jpg
-- ornate-gate-bow.jpg
+AABHA & JAY — WEDDING INVITATION WEBSITE
+Extract this ZIP. Upload index.html and the complete assets folder to the root of your GitHub repository. Keep the assets folder beside index.html. Commit to main.
+Tap TAP TO BEGIN: both palace gate panels open and an original soft instrumental-style melody begins using browser audio synthesis. Browser audio starts only after the tap.
+Wedding date: 12 February 2027.
+Venue: The Ambez Restaurant & Banquet.
+Google Maps: https://maps.app.goo.gl/EPVpKRPEVHxZdZQP9
+Replace placeholder photos in assets later, keeping filenames unchanged.
